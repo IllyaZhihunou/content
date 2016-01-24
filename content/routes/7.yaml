@@ -1,0 +1,113 @@
+routes:
+  - number: 7
+    description: Подкастельцы → Девятая проходная
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:09
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: tehnikum
+        shift: 00:23
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:26
+      - key: podstantsija-to-industrial-zone
+        shift: 00:28
+      - key: vitolit-to-industrial-zone
+        shift: 00:30
+      - key: kpd-to-industrial-zone
+        shift: 00:31
+      - key: nrsmu-to-industrial-zone
+        shift: 00:32
+      - key: desjataja-prohodnaja-to-industrial-zone
+        shift: 00:35
+      - key: devjataja-prohodnaja-to-industrial-zone
+        shift: 00:38
+      - key: sedmaja-prohodnaja-to-industrial-zone
+        shift: 00:40
+    trips:
+      workdays:
+        - 06:50
+        - 14:50
+        - 16:21
+        - 19:01
+        - 22:21
+      weekend:
+        - 06:50
+        - 14:48
+        - 19:00
+  - number: 7
+    description: Девятая проходная → Подкастельцы
+    stops:
+      - key: sedmaja-prohodnaja-from-industrial-zone
+        shift: 00:00
+      - key: devjataja-prohodnaja-from-industrial-zone
+        shift: 00:02
+      - key: desjataja-prohodnaja-from-industrial-zone
+        shift: 00:05
+      - key: nrsmu-from-industrial-zone
+        shift: 00:08
+      - key: kpd-from-industrial-zone
+        shift: 00:09
+      - key: vitolit-from-industrial-zone
+        shift: 00:10
+      - key: podstantsija-from-industrial-zone
+        shift: 00:12
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:14
+      - key: magazin-berezka-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-even
+        shift: 00:20
+      - key: stroitelnaja
+        shift: 00:22
+      - key: molodezhnaja-even
+        shift: 00:23
+      - key: komsomolskaja-even
+        shift: 00:26
+      - key: muzykalnaja-shkola-even
+        shift: 00:28
+      - key: kinoteatr-minsk-even
+        shift: 00:30
+      - key: gostinitsa-naftan-even
+        shift: 00:31
+      - key: zavod-izmeritel-even
+        shift: 00:33
+      - key: podkasteltsy-even
+        shift: 00:35
+      - key: vasilevtsy-even
+        shift: 00:36
+      - key: vosmoj-mikrorajon-even
+        shift: 00:38
+      - key: polimirovskaja-final
+        shift: 00:40
+    trips:
+      workdays:
+        - 08:24
+        - 16:19
+        - 17:10
+        - 20:18
+        - 23:50
+      weekend:
+        - 08:23
+        - 16:25
+        - 20:23

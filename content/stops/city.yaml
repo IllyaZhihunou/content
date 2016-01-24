@@ -1,0 +1,208 @@
+stops:
+  - key: polimirovskaja-even
+    name: Полимировская
+    direction: чётная
+    latitude: 55.503586
+    longitude: 28.706229
+  - key: polimirovskaja-odd
+    name: Полимировская
+    direction: нечётная
+    latitude: 55.504084
+    longitude: 28.706181
+  - key: polimirovskaja-final
+    name: Полимировская
+    direction: конечная
+    latitude: 55.50383
+    longitude: 28.706899
+  - key: vosmoj-mikrorajon-even
+    name: Восьмой микрорайон
+    direction: чётная
+    latitude: 55.506998
+    longitude: 28.701825
+  - key: vosmoj-mikrorajon-odd
+    name: Восьмой микрорайон
+    direction: нечётная
+    latitude: 55.508778
+    longitude: 28.699604
+  - key: vasilevtsy-even
+    name: Василевцы
+    direction: чётная
+    latitude: 55.510041
+    longitude: 28.697424
+  - key: vasilevtsy-odd
+    name: Василевцы
+    direction: нечётная
+    latitude: 55.511238
+    longitude: 28.696197
+  - key: podkasteltsy-even
+    name: Подкастельцы
+    direction: чётная
+    latitude: 55.512152
+    longitude: 28.6942
+  - key: podkasteltsy-odd
+    name: Подкастельцы
+    direction: нечётная
+    latitude: 55.513136
+    longitude: 28.693544
+  - key: zavod-izmeritel-even
+    name: Завод «Измеритель»
+    direction: чётная
+    latitude: 55.516894
+    longitude: 28.687261
+  - key: zavod-izmeritel-odd
+    name: Завод «Измеритель»
+    direction: нечётная
+    latitude: 55.517926
+    longitude: 28.68629
+  - key: gostinitsa-naftan-even
+    name: Гостиница «Нафтан»
+    direction: чётная
+    latitude: 55.520705
+    longitude: 28.681177
+  - key: gostinitsa-naftan-odd
+    name: Гостиница «Нафтан»
+    direction: нечётная
+    latitude: 55.521076
+    longitude: 28.681355
+  - key: kinoteatr-minsk-even
+    name: Кинотеатр «Минск»
+    direction: чётная
+    latitude: 55.523993
+    longitude: 28.675754
+  - key: kinoteatr-minsk-odd
+    name: Кинотеатр «Минск»
+    direction: нечётная
+    latitude: 55.52512
+    longitude: 28.6746
+  - key: muzykalnaja-shkola-even
+    name: Музыкальная школа
+    direction: чётная
+    latitude: 55.526887
+    longitude: 28.670861
+  - key: muzykalnaja-shkola-odd
+    name: Музыкальная школа
+    direction: нечётная
+    latitude: 55.52829
+    longitude: 28.668597
+  - key: komsomolskaja-even
+    name: Комсомольская
+    direction: чётная
+    latitude: 55.530015
+    longitude: 28.664242
+  - key: komsomolskaja-odd
+    name: Комсомольская
+    direction: нечётная
+    latitude: 55.530537
+    longitude: 28.663791
+  - key: kalinina-even
+    name: Калинина
+    direction: чётная
+    latitude: 55.534068
+    longitude: 28.66072
+  - key: kalinina-odd
+    name: Калинина
+    direction: нечётная
+    latitude: 55.534363
+    longitude: 28.661578
+  - key: molodezhnaja-even
+    name: Молодёжная
+    direction: чётная
+    latitude: 55.533549
+    longitude: 28.653497
+  - key: molodezhnaja-odd
+    name: Молодёжная
+    direction: нечётная
+    latitude: 55.533418
+    longitude: 28.655165
+  - key: pgu
+    name: ПГУ
+    latitude: 55.529089
+    longitude: 28.648492
+  - key: poliklinika-no-1
+    name: Поликлиника № 1
+    latitude: 55.531086
+    longitude: 28.644565
+  - key: stroitelnaja
+    name: Строительная
+    latitude: 55.534487
+    longitude: 28.649501
+  - key: avtovokzal-novopolotsk-roadway
+    name: "Автовокзал: Новополоцк"
+    direction: шоссе
+    latitude: 55.531512
+    longitude: 28.641738
+  - key: avtovokzal-novopolotsk-boarding
+    name: "Автовокзал: Новополоцк"
+    direction: посадка
+    latitude: 55.531092
+    longitude: 28.639611
+  - key: avtovokzal-novopolotsk-final
+    name: "Автовокзал: Новополоцк"
+    direction: конечная
+    latitude: 55.5317
+    longitude: 28.639581
+  - key: gostinitsa-belarus-even
+    name: Гостиница «Беларусь»
+    direction: чётная
+    latitude: 55.536533
+    longitude: 28.642967
+  - key: gostinitsa-belarus-odd
+    name: Гостиница «Беларусь»
+    direction: нечётная
+    latitude: 55.536387
+    longitude: 28.644146
+  - key: kinoteatr-kosmos-even
+    name: Кинотеатр «Космос»
+    direction: чётная
+    latitude: 55.53873
+    longitude: 28.638015
+  - key: kinoteatr-kosmos-odd
+    name: Кинотеатр «Космос»
+    direction: нечётная
+    latitude: 55.539428
+    longitude: 28.636888
+  - key: magazin-berezka-even
+    name: Магазин «Берёзка»
+    direction: чётная
+    latitude: 55.53774
+    longitude: 28.632458
+  - key: magazin-berezka-odd
+    name: Магазин «Берёзка»
+    direction: нечётная
+    latitude: 55.538206
+    longitude: 28.633561
+  - key: gdk-odd
+    name: ГДК
+    direction: нечётная
+    latitude: 55.540548
+    longitude: 28.633486
+  - key: pervaja-palatka-even
+    name: Первая палатка
+    direction: чётная
+    latitude: 55.542285
+    longitude: 28.627308
+  - key: pervaja-palatka-odd
+    name: Первая палатка
+    direction: нечётная
+    latitude: 55.542763
+    longitude: 28.626377
+  - key: slobodskaja-even
+    name: Слободская
+    direction: чётная
+    latitude: 55.536801
+    longitude: 28.626421
+  - key: slobodskaja-odd
+    name: Слободская
+    direction: нечётная
+    latitude: 55.536059
+    longitude: 28.627893
+  - key: gajdara-even
+    name: Гайдара
+    direction: чётная
+    latitude: 55.539584
+    longitude: 28.620613
+  - key: gajdara-odd
+    name: Гайдара
+    direction: нечётная
+    latitude: 55.539994
+    longitude: 28.621545

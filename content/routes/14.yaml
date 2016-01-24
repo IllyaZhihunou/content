@@ -1,0 +1,33 @@
+routes:
+  - number: 14
+    description: Ропнянская → Подкастельцы
+    stops:
+      - key: ropnjanskaja
+        shift: 00:00
+      - key: kalinina-even
+        shift: 00:05
+      - key: komsomolskaja-even
+        shift: 00:08
+      - key: muzykalnaja-shkola-even
+        shift: 00:10
+      - key: kinoteatr-minsk-even
+        shift: 00:12
+      - key: gostinitsa-naftan-even
+        shift: 00:13
+      - key: zavod-izmeritel-even
+        shift: 00:15
+      - key: podkasteltsy-even
+        shift: 00:17
+      - key: vasilevtsy-even
+        shift: 00:18
+      - key: vosmoj-mikrorajon-even
+        shift: 00:20
+      - key: polimirovskaja-final
+        shift: 00:21
+    trips:
+      weekend:
+        - 14:45
+        - 21:30
+        - 09:30
+        - 14:45
+        - 21:30

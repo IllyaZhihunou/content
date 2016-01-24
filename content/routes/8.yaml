@@ -1,0 +1,387 @@
+routes:
+  - number: 8
+    description: Подкастельцы → БВК
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:25
+      - key: po-trebovaniju-to-industrial-zone
+        shift: 00:27
+      - key: profilaktorij-bvk-to-industrial-zone
+        shift: 00:28
+      - key: shnitki-no-1-to-industrial-zone
+        shift: 00:30
+      - key: shnitki-no-2-to-industrial-zone
+        shift: 00:32
+      - key: vitorzhe-to-industrial-zone
+        shift: 00:33
+      - key: garazhi-to-industrial-zone
+        shift: 00:37
+      - key: santiz-to-industrial-zone
+        shift: 00:39
+      - key: bvk
+        shift: 00:42
+    trips:
+      workdays:
+        - 06:27
+        - 06:55
+        - 07:10
+        - 07:35
+        - 08:04
+        - 11:56
+        - 14:23
+        - 15:07
+        - 16:05
+        - 16:26
+        - 18:54
+        - 19:30
+      weekend:
+        - 06:35
+        - 07:00
+        - 07:35
+        - 18:50
+        - 19:35
+  - number: 8
+    description: Подкастельцы → БВК 1
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:25
+      - key: po-trebovaniju-to-industrial-zone
+        shift: 00:27
+      - key: profilaktorij-bvk-to-industrial-zone
+        shift: 00:28
+      - key: shnitki-no-1-to-industrial-zone
+        shift: 00:30
+      - key: shnitki-no-2-to-industrial-zone
+        shift: 00:32
+      - key: vitorzhe-to-industrial-zone
+        shift: 00:33
+      - key: garazhi-to-industrial-zone
+        shift: 00:37
+      - key: santiz-to-industrial-zone
+        shift: 00:39
+    trips:
+      workdays:
+        - 05:55
+        - 09:03
+        - 09:50
+        - 10:42
+        - 13:16
+        - 16:58
+        - 17:50
+        - 20:57
+      weekend:
+        - 06:00
+        - 08:12
+        - 09:21
+        - 10:05
+        - 10:51
+        - 11:45
+        - 12:40
+        - 13:20
+        - 14:15
+        - 14:56
+        - 16:07
+        - 16:45
+        - 17:40
+        - 20:09
+        - 20:53
+  - number: 8
+    description: Подкастельцы → Весовая БВК
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:25
+      - key: po-trebovaniju-to-industrial-zone
+        shift: 00:27
+      - key: profilaktorij-bvk-to-industrial-zone
+        shift: 00:28
+      - key: shnitki-no-1-to-industrial-zone
+        shift: 00:30
+      - key: shnitki-no-2-to-industrial-zone
+        shift: 00:32
+      - key: vitorzhe-to-industrial-zone
+        shift: 00:33
+      - key: vesovaja-to-industrial-zone
+        shift: 00:38
+    trips:
+      workdays:
+        - 08:45
+        - 13:28
+        - 18:08
+      weekend:
+        - 07:57
+        - 13:48
+        - 18:18
+  - number: 8
+    description: БВК → Подкастельцы
+    stops:
+      - key: bvk
+        shift: 00:00
+      - key: santiz-from-industrial-zone
+        shift: 00:02
+      - key: garazhi-from-industrial-zone
+        shift: 00:04
+      - key: vitorzhe-from-industrial-zone
+        shift: 00:07
+      - key: shnitki-no-2-from-industrial-zone
+        shift: 00:09
+      - key: shnitki-no-1-from-industrial-zone
+        shift: 00:12
+      - key: profilaktorij-bvk-from-industrial-zone
+        shift: 00:14
+      - key: po-trebovaniju-from-industrial-zone
+        shift: 00:15
+      - key: gajdara-odd
+        shift: 00:18
+      - key: pervaja-palatka-even
+        shift: 00:29
+      - key: kinoteatr-kosmos-even
+        shift: 00:22
+      - key: gostinitsa-belarus-even
+        shift: 00:23
+      - key: stroitelnaja
+        shift: 00:25
+      - key: molodezhnaja-even
+        shift: 00:26
+      - key: komsomolskaja-even
+        shift: 00:29
+      - key: muzykalnaja-shkola-even
+        shift: 00:31
+      - key: kinoteatr-minsk-even
+        shift: 00:33
+      - key: gostinitsa-naftan-even
+        shift: 00:34
+      - key: zavod-izmeritel-even
+        shift: 00:36
+      - key: podkasteltsy-even
+        shift: 00:37
+      - key: vasilevtsy-even
+        shift: 00:39
+      - key: vosmoj-mikrorajon-even
+        shift: 00:40
+      - key: polimirovskaja-final
+        shift: 00:42
+    trips:
+      workdays:
+        - 07:10
+        - 07:41
+        - 08:07
+        - 08:21
+        - 08:50
+        - 12:41
+        - 15:09
+        - 15:54
+        - 16:57
+        - 17:12
+        - 19:40
+        - 20:12
+      weekend:
+        - 07:21
+        - 08:05
+        - 08:21
+        - 19:41
+        - 20:19
+  - number: 8
+    description: БВК 1 → Подкастельцы
+    stops:
+      - key: santiz-from-industrial-zone
+        shift: 00:00
+      - key: garazhi-from-industrial-zone
+        shift: 00:02
+      - key: vitorzhe-from-industrial-zone
+        shift: 00:04
+      - key: shnitki-no-2-from-industrial-zone
+        shift: 00:07
+      - key: shnitki-no-1-from-industrial-zone
+        shift: 00:09
+      - key: profilaktorij-bvk-from-industrial-zone
+        shift: 00:11
+      - key: po-trebovaniju-from-industrial-zone
+        shift: 00:13
+      - key: gajdara-odd
+        shift: 00:15
+      - key: pervaja-palatka-even
+        shift: 00:17
+      - key: kinoteatr-kosmos-even
+        shift: 00:19
+      - key: gostinitsa-belarus-even
+        shift: 00:21
+      - key: stroitelnaja
+        shift: 00:23
+      - key: molodezhnaja-even
+        shift: 00:24
+      - key: komsomolskaja-even
+        shift: 00:27
+      - key: muzykalnaja-shkola-even
+        shift: 00:28
+      - key: kinoteatr-minsk-even
+        shift: 00:30
+      - key: gostinitsa-naftan-even
+        shift: 00:31
+      - key: zavod-izmeritel-even
+        shift: 00:33
+      - key: podkasteltsy-even
+        shift: 00:35
+      - key: vasilevtsy-even
+        shift: 00:37
+      - key: vosmoj-mikrorajon-even
+        shift: 00:38
+      - key: polimirovskaja-final
+        shift: 00:39
+    trips:
+      workdays:
+        - 06:43
+        - 09:49
+        - 10:33
+        - 11:25
+        - 14:02
+        - 17:51
+        - 18:31
+        - 21:40
+      weekend:
+        - 06:46
+        - 09:08
+        - 10:16
+        - 11:02
+        - 11:44
+        - 12:32
+        - 13:27
+        - 14:12
+        - 15:02
+        - 15:39
+        - 16:52
+        - 17:29
+        - 18:29
+        - 20:50
+        - 21:38
+  - number: 8
+    description: Весовая БВК → Подкастельцы
+    stops:
+      - key: vesovaja-from-industrial-zone
+        shift: 00:00
+      - key: vitorzhe-from-industrial-zone
+        shift: 00:05
+      - key: shnitki-no-2-from-industrial-zone
+        shift: 00:07
+      - key: shnitki-no-1-from-industrial-zone
+        shift: 00:10
+      - key: profilaktorij-bvk-from-industrial-zone
+        shift: 00:12
+      - key: po-trebovaniju-from-industrial-zone
+        shift: 00:13
+      - key: gajdara-odd
+        shift: 00:16
+      - key: pervaja-palatka-even
+        shift: 00:17
+      - key: kinoteatr-kosmos-even
+        shift: 00:19
+      - key: gostinitsa-belarus-even
+        shift: 00:21
+      - key: stroitelnaja
+        shift: 00:23
+      - key: molodezhnaja-even
+        shift: 00:24
+      - key: komsomolskaja-even
+        shift: 00:27
+      - key: muzykalnaja-shkola-even
+        shift: 00:29
+      - key: kinoteatr-minsk-even
+        shift: 00:31
+      - key: gostinitsa-naftan-even
+        shift: 00:32
+      - key: zavod-izmeritel-even
+        shift: 00:34
+      - key: podkasteltsy-even
+        shift: 00:35
+      - key: vasilevtsy-even
+        shift: 00:37
+      - key: vosmoj-mikrorajon-even
+        shift: 00:38
+      - key: polimirovskaja-final
+        shift: 00:40
+    trips:
+      workdays:
+        - 09:35
+        - 14:10
+        - 19:01
+      weekend:
+        - 08:47
+        - 14:34
+        - 19:17

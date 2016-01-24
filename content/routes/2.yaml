@@ -1,0 +1,444 @@
+routes:
+  - number: 2
+    description: Подкастельцы → ОАО «Нафтан»
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: tehnikum
+        shift: 00:23
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:26
+      - key: podstantsija-to-industrial-zone
+        shift: 00:28
+      - key: belsantehmontazh-to-industrial-zone
+        shift: 00:30
+      - key: avtopark-to-industrial-zone
+        shift: 00:32
+      - key: upravlenie-mehanizatsii-to-industrial-zone
+        shift: 00:34
+      - key: oao-naftan-final
+        shift: 00:36
+    trips:
+      workdays:
+        - 05:40
+        - 05:52
+        - 06:02
+        - 06:17
+        - 06:22
+        - 08:00
+        - 08:18
+        - 08:35
+        - 08:59
+        - 09:25
+        - 09:55
+        - 10:18
+        - 10:40
+        - 11:04
+        - 11:32
+        - 11:49
+        - 12:19
+        - 12:45
+        - 13:10
+        - 13:31
+        - 13:49
+        - 14:14
+        - 14:32
+        - 14:43
+        - 15:00
+        - 15:16
+        - 15:36
+        - 15:51
+        - 15:57
+        - 16:09
+        - 16:14
+        - 16:22
+        - 16:30
+        - 16:33
+        - 17:07
+        - 17:47
+        - 18:14
+        - 18:35
+        - 18:47
+        - 19:04
+        - 20:41
+        - 21:58
+      weekend:
+        - 05:45
+        - 06:05
+        - 06:25
+        - 06:43
+        - 07:05
+        - 07:52
+        - 08:22
+        - 08:55
+        - 12:20
+        - 13:15
+        - 14:00
+        - 14:25
+        - 15:08
+        - 16:15
+        - 17:17
+        - 18:30
+        - 18:58
+        - 20:35
+        - 22:00
+  - number: 2
+    description: Подкастельцы → АВТ
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: tehnikum
+        shift: 00:23
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:26
+      - key: podstantsija-to-industrial-zone
+        shift: 00:28
+      - key: belsantehmontazh-to-industrial-zone
+        shift: 00:29
+      - key: avtopark-to-industrial-zone
+        shift: 00:31
+      - key: upravlenie-mehanizatsii-to-industrial-zone
+        shift: 00:33
+      - key: oao-naftan-to-industrial-zone
+        shift: 00:35
+      - key: tets-to-industrial-zone
+        shift: 00:36
+      - key: su-tets-to-industrial-zone
+        shift: 00:37
+      - key: avt-to-industrial-zone
+        shift: 00:40
+    trips:
+      workdays:
+        - 06:10
+        - 06:56
+        - 15:21
+        - 15:29
+        - 15:47
+        - 16:24
+        - 16:27
+        - 16:48
+        - 17:17
+        - 19:20
+        - 22:28
+        - 23:21
+      weekend:
+        - 07:20
+        - 15:30
+        - 19:25
+        - 22:20
+        - 23:20
+  - number: 2э
+    description: Подкастельцы → ОАО «Нафтан»
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: poliklinika-no-1
+        shift: 00:18
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:23
+      - key: podstantsija-to-industrial-zone
+        shift: 00:25
+      - key: belsantehmontazh-to-industrial-zone
+        shift: 00:27
+      - key: avtopark-to-industrial-zone
+        shift: 00:28
+      - key: upravlenie-mehanizatsii-to-industrial-zone
+        shift: 00:29
+      - key: oao-naftan-final
+        shift: 00:32
+    trips:
+      workdays:
+        - 06:28
+        - 06:34
+        - 06:40
+        - 06:46
+        - 06:52
+        - 07:01
+        - 07:07
+        - 07:13
+        - 07:20
+        - 07:30
+        - 07:41
+        - 07:53
+  - number: 2
+    description: Молодёжная → ОАО «Нафтан»
+    stops:
+      - key: molodezhnaja-odd
+        shift: 00:00
+      - key: gostinitsa-belarus-odd
+        shift: 00:02
+      - key: magazin-berezka-even
+        shift: 00:05
+      - key: tehnikum
+        shift: 00:06
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:09
+      - key: podstantsija-to-industrial-zone
+        shift: 00:11
+      - key: belsantehmontazh-to-industrial-zone
+        shift: 00:12
+      - key: avtopark-to-industrial-zone
+        shift: 00:14
+      - key: upravlenie-mehanizatsii-to-industrial-zone
+        shift: 00:15
+      - key: oao-naftan-final
+        shift: 00:18
+    trips:
+      workdays:
+        - 06:47
+        - 06:59
+        - 07:12
+        - 07:29
+        - 07:39
+        - 07:51
+        - 08:03
+  - number: 2
+    description: ОАО «Нафтан» → Подкастельцы
+    stops:
+      - key: oao-naftan-from-industrial-zone
+        shift: 00:00
+      - key: upravlenie-mehanizatsii-from-industrial-zone
+        shift: 00:03
+      - key: avtopark-from-industrial-zone
+        shift: 00:05
+      - key: belsantehmontazh-from-industrial-zone
+        shift: 00:06
+      - key: podstantsija-from-industrial-zone
+        shift: 00:07
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:09
+      - key: magazin-berezka-odd
+        shift: 00:12
+      - key: kinoteatr-kosmos-even
+        shift: 00:14
+      - key: gostinitsa-belarus-even
+        shift: 00:15
+      - key: stroitelnaja
+        shift: 00:17
+      - key: molodezhnaja-even
+        shift: 00:18
+      - key: komsomolskaja-even
+        shift: 00:21
+      - key: muzykalnaja-shkola-even
+        shift: 00:22
+      - key: kinoteatr-minsk-even
+        shift: 00:24
+      - key: gostinitsa-naftan-even
+        shift: 00:25
+      - key: zavod-izmeritel-even
+        shift: 00:27
+      - key: podkasteltsy-even
+        shift: 00:29
+      - key: vasilevtsy-even
+        shift: 00:31
+      - key: vosmoj-mikrorajon-even
+        shift: 00:32
+      - key: polimirovskaja-final
+        shift: 00:33
+    trips:
+      workdays:
+        - 06:17
+        - 06:28
+        - 06:38
+        - 07:03
+        - 07:21
+        - 07:40
+        - 07:46
+        - 07:50
+        - 07:57
+        - 08:04
+        - 08:08
+        - 08:12
+        - 08:21
+        - 08:26
+        - 08:30
+        - 08:34
+        - 08:37
+        - 08:49
+        - 08:58
+        - 09:15
+        - 09:43
+        - 10:07
+        - 10:32
+        - 10:55
+        - 11:19
+        - 11:46
+        - 12:09
+        - 12:34
+        - 12:59
+        - 13:23
+        - 13:54
+        - 14:11
+        - 14:32
+        - 14:50
+        - 15:09
+        - 15:23
+        - 15:37
+        - 15:52
+        - 16:12
+        - 16:27
+        - 16:36
+        - 16:48
+        - 16:55
+        - 17:00
+        - 17:05
+        - 17:10
+        - 17:20
+        - 17:26
+        - 17:44
+        - 18:23
+        - 18:50
+        - 19:13
+        - 19:41
+        - 21:16
+        - 22:38
+      weekend:
+        - 06:23
+        - 06:40
+        - 07:00
+        - 07:09
+        - 07:18
+        - 07:40
+        - 08:37
+        - 08:59
+        - 09:34
+        - 12:55
+        - 13:51
+        - 14:37
+        - 15:16
+        - 15:47
+        - 17:02
+        - 17:54
+        - 19:05
+        - 19:37
+        - 21:13
+        - 22:35
+  - number: 2
+    description: АВТ → Подкастельцы
+    stops:
+      - key: avt-from-industrial-zone
+        shift: 00:00
+      - key: su-tets-from-industrial-zone
+        shift: 00:02
+      - key: tets-from-industrial-zone
+        shift: 00:03
+      - key: oao-naftan-from-industrial-zone
+        shift: 00:05
+      - key: upravlenie-mehanizatsii-from-industrial-zone
+        shift: 00:08
+      - key: avtopark-from-industrial-zone
+        shift: 00:10
+      - key: belsantehmontazh-from-industrial-zone
+        shift: 00:12
+      - key: podstantsija-from-industrial-zone
+        shift: 00:07
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:14
+      - key: magazin-berezka-odd
+        shift: 00:17
+      - key: kinoteatr-kosmos-even
+        shift: 00:18
+      - key: gostinitsa-belarus-even
+        shift: 00:20
+      - key: stroitelnaja
+        shift: 00:22
+      - key: molodezhnaja-even
+        shift: 00:23
+      - key: komsomolskaja-even
+        shift: 00:26
+      - key: muzykalnaja-shkola-even
+        shift: 00:28
+      - key: kinoteatr-minsk-even
+        shift: 00:29
+      - key: gostinitsa-naftan-even
+        shift: 00:30
+      - key: zavod-izmeritel-even
+        shift: 00:32
+      - key: podkasteltsy-even
+        shift: 00:34
+      - key: vasilevtsy-even
+        shift: 00:36
+      - key: vosmoj-mikrorajon-even
+        shift: 00:37
+      - key: polimirovskaja-final
+        shift: 00:38
+    trips:
+      workdays:
+        - 07:21
+        - 07:38
+        - 16:01
+        - 16:12
+        - 16:36
+        - 17:03
+        - 17:12
+        - 17:29
+        - 17:59
+        - 20:11
+        - 23:11
+        - 24:00
+      weekend:
+        - 08:10
+        - 16:15
+        - 20:10
+        - 23:16
+        - 24:00

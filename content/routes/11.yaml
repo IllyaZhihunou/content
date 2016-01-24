@@ -1,0 +1,67 @@
+routes:
+  - number: 11
+    description: Подкастельцы ⇄ Больничный городок
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:07
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: poliklinika-no-1
+        shift: 00:17
+      - key: slobodskaja-even
+        shift: 00:22
+      - key: gajdara-odd
+        shift: 00:23
+      - key: pervaja-palatka-even
+        shift: 00:25
+      - key: magazin-berezka-even
+        shift: 00:27
+      - key: avtovokzal-novopolotsk-roadway
+        shift: 00:30
+      - key: pgu
+        shift: 00:32
+      - key: komsomolskaja-even
+        shift: 00:35
+      - key: muzykalnaja-shkola-even
+        shift: 00:37
+      - key: kinoteatr-minsk-even
+        shift: 00:38
+      - key: gostinitsa-naftan-even
+        shift: 00:40
+      - key: zavod-izmeritel-even
+        shift: 00:42
+      - key: podkasteltsy-even
+        shift: 00:43
+      - key: vasilevtsy-even
+        shift: 00:45
+      - key: vosmoj-mikrorajon-even
+        shift: 00:46
+      - key: polimirovskaja-final
+        shift: 00:47
+    trips:
+      workdays:
+        - 07:26
+        - 07:47
+        - 08:14
+        - 09:35
+        - 10:53
+        - 11:40
+        - 12:34
+        - 13:19
+        - 14:19
+        - 15:09
+        - 16:38

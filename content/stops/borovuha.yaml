@@ -1,0 +1,111 @@
+stops:
+  - key: koptevo-to-borovuha
+    name: Коптево
+    direction: в Боровуху
+    latitude: 55.542185
+    longitude: 28.666802
+  - key: koptevo-from-borovuha
+    name: Коптево
+    direction: из Боровухи
+    latitude: 55.5418
+    longitude: 28.666802
+  - key: ohotnitsa-no-1-to-borovuha
+    name: Охотница № 1
+    direction: в Боровуху
+    latitude: 55.550659
+    longitude: 28.633479
+  - key: ohotnitsa-no-1-from-borovuha
+    name: Охотница № 1
+    direction: из Боровухи
+    latitude: 55.5503
+    longitude: 28.633575
+  - key: ohotnitsa-po-trebovaniju-to-borovuha
+    name: Охотница по требованию
+    direction: в Боровуху
+    latitude: 55.554539
+    longitude: 28.62268
+  - key: ohotnitsa-po-trebovaniju-from-borovuha
+    name: Охотница по требованию
+    direction: из Боровухи
+    latitude: 55.553712
+    longitude: 28.624247
+  - key: ohotnitsa-no-2-to-borovuha
+    name: Охотница № 2
+    direction: в Боровуху
+    latitude: 55.56184
+    longitude: 28.609099
+  - key: ohotnitsa-no-2-from-borovuha
+    name: Охотница № 2
+    direction: из Боровухи
+    latitude: 55.561451
+    longitude: 28.6094
+  - key: glinische-to-borovuha
+    name: Глинище
+    direction: в Боровуху
+    latitude: 55.571711
+    longitude: 28.592881
+  - key: glinische-from-borovuha
+    name: Глинище
+    direction: из Боровухи
+    latitude: 55.56945
+    longitude: 28.594644
+  - key: kladbische-to-borovuha
+    name: Кладбище
+    direction: в Боровуху
+    latitude: 55.577678
+    longitude: 28.587792
+  - key: kladbische-from-borovuha
+    name: Кладбище
+    direction: из Боровухи
+    latitude: 55.576402
+    longitude: 28.588436
+  - key: perekrestok-to-borovuha
+    name: Перекрёсток
+    direction: в Боровуху
+    latitude: 55.585773
+    longitude: 28.581786
+  - key: perekrestok-from-borovuha
+    name: Перекрёсток
+    direction: из Боровухи
+    latitude: 55.584667
+    longitude: 28.581324
+  - key: gorodok-to-borovuha
+    name: Городок
+    direction: в Боровуху
+    latitude: 55.588487
+    longitude: 28.587772
+  - key: gorodok-from-borovuha
+    name: Городок
+    direction: из Боровухи
+    latitude: 55.588484
+    longitude: 28.588711
+  - key: dom-ofitserov-to-borovuha
+    name: Дом Офицеров
+    direction: в Боровуху
+    latitude: 55.586525
+    longitude: 28.598334
+  - key: dom-ofitserov-from-borovuha
+    name: Дом Офицеров
+    direction: из Боровухи
+    latitude: 55.58654
+    longitude: 28.599933
+  - key: selpo-to-borovuha
+    name: Сельпо
+    direction: в Боровуху
+    latitude: 55.586529
+    longitude: 28.605572
+  - key: selpo-from-borovuha
+    name: Сельпо
+    direction: из Боровухи
+    latitude: 55.586786
+    longitude: 28.605566
+  - key: uor-to-borovuha
+    name: УОР
+    direction: в Боровуху
+    latitude: 55.590521
+    longitude: 28.614895
+  - key: uor-from-borovuha
+    name: УОР
+    direction: из Боровухи
+    latitude: 55.590671
+    longitude: 28.614616

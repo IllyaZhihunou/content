@@ -1,0 +1,201 @@
+stops:
+  - key: koptevo-to-polotsk
+    name: Коптево
+    direction: в Полоцк
+    latitude: 55.539927
+    longitude: 28.668764
+  - key: koptevo-from-polotsk
+    name: Коптево
+    direction: из Полоцка
+    latitude: 55.540719
+    longitude: 28.670223
+  - key: ropno-to-polotsk
+    name: Ропно
+    direction: в Полоцк
+    latitude: 55.533534
+    longitude: 28.689337
+  - key: ropno-from-polotsk
+    name: Ропно
+    direction: из Полоцка
+    latitude: 55.53401
+    longitude: 28.688913
+  - key: kladbische-to-polotsk
+    name: Кладбище
+    direction: в Полоцк
+    latitude: 55.524026
+    longitude: 28.700715
+  - key: kladbische-from-polotsk
+    name: Кладбище
+    direction: из Полоцка
+    latitude: 55.524165
+    longitude: 28.700725
+  - key: cherneschino-to-polotsk
+    name: Чернещино
+    direction: в Полоцк
+    latitude: 55.506238
+    longitude: 28.723969
+  - key: cherneschino-from-polotsk
+    name: Чернещино
+    direction: из Полоцка
+    latitude: 55.506518
+    longitude: 28.723543
+  - key: azs
+    name: АЗС
+    latitude: 55.504324
+    longitude: 28.742332
+  - key: matrosova-to-polotsk
+    name: Матросова
+    direction: в Полоцк
+    latitude: 55.501635
+    longitude: 28.751248
+  - key: matrosova-from-polotsk
+    name: Матросова
+    direction: из Полоцка
+    latitude: 55.502264
+    longitude: 28.750904
+  - key: baza-to-polotsk
+    name: База
+    direction: в Полоцк
+    latitude: 55.496262
+    longitude: 28.759471
+  - key: baza-from-polotsk
+    name: База
+    direction: из Полоцка
+    latitude: 55.496538
+    longitude: 28.75927
+  - key: kolledzh-to-polotsk
+    name: Колледж
+    direction: в Полоцк
+    latitude: 55.494437
+    longitude: 28.767352
+  - key: kolledzh-from-polotsk
+    name: Колледж
+    direction: из Полоцка
+    latitude: 55.49447
+    longitude: 28.768269
+  - key: gorispolkom
+    name: Горисполком
+    latitude: 55.486924
+    longitude: 28.769143
+  - key: kommunisticheskaja
+    name: Коммунистическая
+    latitude: 55.485982
+    longitude: 28.781272
+  - key: avtovokzal-polotsk-entrance
+    name: "Автовокзал: Полоцк"
+    direction: вход
+    latitude: 55.490143
+    longitude: 28.782836
+  - key: zheleznodorozhnyj-vokzal
+    name: Железнодорожный вокзал
+    latitude: 55.491246
+    longitude: 28.779244
+  - key: lugovaja-to-polotsk
+    name: Луговая
+    direction: в Полоцк
+    latitude: 55.494686
+    longitude: 28.7111
+  - key: lugovaja-from-polotsk
+    name: Луговая
+    direction: из Полоцка
+    latitude: 55.495358
+    longitude: 28.710977
+  - key: ekiman-no-1-to-polotsk
+    name: Экимань № 1
+    direction: в Полоцк
+    latitude: 55.485784
+    longitude: 28.718004
+  - key: ekiman-no-1-from-polotsk
+    name: Экимань № 1
+    direction: из Полоцка
+    latitude: 55.486112
+    longitude: 28.71897
+  - key: ekiman-no-2-to-polotsk
+    name: Экимань № 2
+    direction: в Полоцк
+    latitude: 55.482878
+    longitude: 28.730621
+  - key: ekiman-no-2-from-polotsk
+    name: Экимань № 2
+    direction: из Полоцка
+    latitude: 55.4833603
+    longitude: 28.7301922
+  - key: bolnitsa-to-polotsk
+    name: Больница
+    direction: в Полоцк
+    latitude: 55.4768524
+    longitude: 28.7420044
+  - key: bolnitsa-from-polotsk
+    name: Больница
+    direction: из Полоцка
+    latitude: 55.476993
+    longitude: 28.742938
+  - key: perekrestok-to-polotsk
+    name: Перекрёсток
+    direction: в Полоцк
+    latitude: 55.4737244
+    longitude: 28.7555866
+  - key: perekrestok-from-polotsk
+    name: Перекрёсток
+    direction: из Полоцка
+    latitude: 55.473965
+    longitude: 28.754665
+  - key: kadetskoe-uchilische-to-polotsk
+    name: Кадетское училище
+    direction: в Полоцк
+    latitude: 55.473114
+    longitude: 28.7650604
+  - key: kadetskoe-uchilische-from-polotsk
+    name: Кадетское училище
+    direction: из Полоцка
+    latitude: 55.4733467
+    longitude: 28.7631245
+  - key: magazin-no-15-to-polotsk
+    name: Магазин № 15
+    direction: в Полоцк
+    latitude: 55.4725838
+    longitude: 28.7731514
+  - key: magazin-no-15-from-polotsk
+    name: Магазин № 15
+    direction: из Полоцка
+    latitude: 55.4728088
+    longitude: 28.7719116
+  - key: kulneva-to-polotsk
+    name: Кульнева
+    direction: в Полоцк
+    latitude: 55.4766808
+    longitude: 28.7840996
+  - key: kulneva-from-polotsk
+    name: Кульнева
+    direction: из Полоцка
+    latitude: 55.475765
+    longitude: 28.783407
+  - key: jubilejnaja-to-polotsk
+    name: Юбилейная
+    direction: в Полоцк
+    latitude: 55.486661
+    longitude: 28.787184
+  - key: jubilejnaja-from-polotsk
+    name: Юбилейная
+    direction: из Полоцка
+    latitude: 55.4861374
+    longitude: 28.786541
+  - key: avtovokzal-polotsk-final
+    name: "Автовокзал: Полоцк"
+    direction: конечная
+    latitude: 55.4897919
+    longitude: 28.7846832
+  - key: dionis
+    name: Дионис
+    latitude: 55.489197
+    longitude: 28.785017
+  - key: solnechnaja-to-polotsk
+    name: Солнечная
+    direction: в Полоцк
+    latitude: 55.498795
+    longitude: 28.709119
+  - key: solnechnaja-from-polotsk
+    name: Солнечная
+    direction: из Полоцка
+    latitude: 55.499301
+    longitude: 28.709232

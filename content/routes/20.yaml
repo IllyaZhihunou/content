@@ -1,0 +1,83 @@
+routes:
+  - number: 20
+    description: Подкастельцы → Автовокзал через Берёзку
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: avtovokzal-novopolotsk-roadway
+        shift: 00:25
+    trips:
+      weekend:
+        - 07:06
+        - 07:36
+        - 17:31
+        - 20:16
+      workdays:
+        - 07:06
+        - 07:36
+  - number: 20а
+    description: Подкастельцы → Автовокзал через Гайдара
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:04
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:12
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:26
+      - key: slobodskaja-odd
+        shift: 00:28
+      - key: avtovokzal-novopolotsk-roadway
+        shift: 00:31
+    trips:
+      weekend:
+        - 05:30
+        - 13:03
+      workdays:
+        - 05:30
+        - 13:53
+        - 14:07
+        - 14:17

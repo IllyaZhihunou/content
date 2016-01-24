@@ -1,0 +1,278 @@
+stops:
+  - key: tehnikum
+    name: Техникум
+    latitude: 55.534873
+    longitude: 28.629631
+  - key: tramvajnyj-park-to-industrial-zone
+    name: Трамвайный парк
+    direction: в промзону
+    latitude: 55.529286
+    longitude: 28.610029
+  - key: tramvajnyj-park-from-industrial-zone
+    name: Трамвайный парк
+    direction: из промзоны
+    latitude: 55.528703
+    longitude: 28.610287
+  - key: podstantsija-to-industrial-zone
+    name: Подстанция
+    direction: в промзону
+    latitude: 55.527313
+    longitude: 28.597219
+  - key: podstantsija-from-industrial-zone
+    name: Подстанция
+    direction: из промзоны
+    latitude: 55.526954
+    longitude: 28.597412
+  - key: belsantehmontazh-to-industrial-zone
+    name: Белсантехмонтаж
+    direction: в промзону
+    latitude: 55.524474
+    longitude: 28.586013
+  - key: belsantehmontazh-from-industrial-zone
+    name: Белсантехмонтаж
+    direction: из промзоны
+    latitude: 55.524383
+    longitude: 28.586297
+  - key: avtopark-to-industrial-zone
+    name: Автопарк
+    direction: в промзону
+    latitude: 55.523037
+    longitude: 28.581072
+  - key: avtopark-from-industrial-zone
+    name: Автопарк
+    direction: из промзоны
+    latitude: 55.522916
+    longitude: 28.581694
+  - key: upravlenie-mehanizatsii-to-industrial-zone
+    name: Управление механизации
+    direction: в промзону
+    latitude: 55.521039
+    longitude: 28.574388
+  - key: upravlenie-mehanizatsii-from-industrial-zone
+    name: Управление механизации
+    direction: из промзоны
+    latitude: 55.520857
+    longitude: 28.575461
+  - key: oao-naftan-to-industrial-zone
+    name: ОАО «Нафтан»
+    direction: в промзону
+    latitude: 55.523177
+    longitude: 28.558402
+  - key: oao-naftan-from-industrial-zone
+    name: ОАО «Нафтан»
+    direction: из промзоны
+    latitude: 55.522716
+    longitude: 28.558091
+  - key: oao-naftan-final
+    name: ОАО «Нафтан»
+    direction: конечная
+    latitude: 55.522825
+    longitude: 28.557715
+  - key: tets-to-industrial-zone
+    name: ТЭЦ
+    direction: в промзону
+    latitude: 55.52693
+    longitude: 28.552973
+  - key: tets-from-industrial-zone
+    name: ТЭЦ
+    direction: из промзоны
+    latitude: 55.526639
+    longitude: 28.552372
+  - key: su-tets-to-industrial-zone
+    name: СУ-ТЭЦ
+    direction: в промзону
+    latitude: 55.529979
+    longitude: 28.548188
+  - key: su-tets-from-industrial-zone
+    name: СУ-ТЭЦ
+    direction: из промзоны
+    latitude: 55.529554
+    longitude: 28.546772
+  - key: avt-to-industrial-zone
+    name: АВТ
+    direction: в промзону
+    latitude: 55.532407
+    longitude: 28.537631
+  - key: avt-from-industrial-zone
+    name: АВТ
+    direction: из промзоны
+    latitude: 55.532116
+    longitude: 28.537052
+  - key: po-trebovaniju-to-industrial-zone
+    name: По требованию
+    direction: в промзону
+    latitude: 55.54461
+    longitude: 28.612411
+  - key: po-trebovaniju-from-industrial-zone
+    name: По требованию
+    direction: из промзоны
+    latitude: 55.544355
+    longitude: 28.61166
+  - key: profilaktorij-bvk-to-industrial-zone
+    name: Профилакторий БВК
+    direction: в промзону
+    latitude: 55.548495
+    longitude: 28.608441
+  - key: profilaktorij-bvk-from-industrial-zone
+    name: Профилакторий БВК
+    direction: из промзоны
+    latitude: 55.547863
+    longitude: 28.608227
+  - key: shnitki-no-1-to-industrial-zone
+    name: Шнитки № 1
+    direction: в промзону
+    latitude: 55.552901
+    longitude: 28.603249
+  - key: shnitki-no-1-from-industrial-zone
+    name: Шнитки № 1
+    direction: из промзоны
+    latitude: 55.552427
+    longitude: 28.602819
+  - key: shnitki-no-2-to-industrial-zone
+    name: Шнитки № 2
+    direction: в промзону
+    latitude: 55.558581
+    longitude: 28.594311
+  - key: shnitki-no-2-from-industrial-zone
+    name: Шнитки № 2
+    direction: из промзоны
+    latitude: 55.558107
+    longitude: 28.594623
+  - key: vitorzhe-to-industrial-zone
+    name: Виторжье
+    direction: в промзону
+    latitude: 55.559588
+    longitude: 28.580503
+  - key: vitorzhe-from-industrial-zone
+    name: Виторжье
+    direction: из промзоны
+    latitude: 55.559382
+    longitude: 28.581791
+  - key: vesovaja-to-industrial-zone
+    name: Весовая
+    direction: в промзону
+    latitude: 55.548215
+    longitude: 28.585052
+  - key: vesovaja-from-industrial-zone
+    name: Весовая
+    direction: из промзоны
+    latitude: 55.548252
+    longitude: 28.585997
+  - key: garazhi-to-industrial-zone
+    name: Гаражи
+    direction: в промзону
+    latitude: 55.553641
+    longitude: 28.568723
+  - key: garazhi-from-industrial-zone
+    name: Гаражи
+    direction: из промзоны
+    latitude: 55.553787
+    longitude: 28.570032
+  - key: santiz-to-industrial-zone
+    name: Сантиз
+    direction: в промзону
+    latitude: 55.547988
+    longitude: 28.563615
+  - key: santiz-from-industrial-zone
+    name: Сантиз
+    direction: из промзоны
+    latitude: 55.547815
+    longitude: 28.564968
+  - key: bvk
+    name: БВК
+    latitude: 55.541179
+    longitude: 28.563814
+  - key: vitolit-to-industrial-zone
+    name: Витолит
+    direction: в промзону
+    latitude: 55.523469
+    longitude: 28.594505
+  - key: vitolit-from-industrial-zone
+    name: Витолит
+    direction: из промзоны
+    latitude: 55.523488
+    longitude: 28.594806
+  - key: kpd-to-industrial-zone
+    name: КПД
+    direction: в промзону
+    latitude: 55.520821
+    longitude: 28.596168
+  - key: kpd-from-industrial-zone
+    name: КПД
+    direction: из промзоны
+    latitude: 55.520711
+    longitude: 28.596811
+  - key: nrsmu-to-industrial-zone
+    name: НРСМУ
+    direction: в промзону
+    latitude: 55.516289
+    longitude: 28.590031
+  - key: nrsmu-from-industrial-zone
+    name: НРСМУ
+    direction: из промзоны
+    latitude: 55.515998
+    longitude: 28.59149
+  - key: desjataja-prohodnaja-to-industrial-zone
+    name: Десятая проходная
+    direction: в промзону
+    latitude: 55.508307
+    longitude: 28.583765
+  - key: desjataja-prohodnaja-from-industrial-zone
+    name: Десятая проходная
+    direction: из промзоны
+    latitude: 55.508234
+    longitude: 28.58516
+  - key: devjataja-prohodnaja-to-industrial-zone
+    name: Девятая проходная
+    direction: в промзону
+    latitude: 55.504175
+    longitude: 28.588829
+  - key: devjataja-prohodnaja-from-industrial-zone
+    name: Девятая проходная
+    direction: из промзоны
+    latitude: 55.503969
+    longitude: 28.591104
+  - key: zavod-polimir-to-industrial-zone
+    name: Завод «Полимир»
+    direction: в промзону
+    latitude: 55.512681
+    longitude: 28.579838
+  - key: zavod-polimir-from-industrial-zone
+    name: Завод «Полимир»
+    direction: из промзоны
+    latitude: 55.512299
+    longitude: 28.580359
+  - key: pozharnaja-to-industrial-zone
+    name: Пожарная
+    direction: в промзону
+    latitude: 55.509753
+    longitude: 28.572671
+  - key: pozharnaja-from-industrial-zone
+    name: Пожарная
+    direction: из промзоны
+    latitude: 55.509558
+    longitude: 28.57338
+  - key: tretja-prohodnaja-to-industrial-zone
+    name: Третья проходная
+    direction: в промзону
+    latitude: 55.505846
+    longitude: 28.566556
+  - key: tretja-prohodnaja-from-industrial-zone
+    name: Третья проходная
+    direction: из промзоны
+    latitude: 55.505843
+    longitude: 28.566283
+  - key: sedmaja-prohodnaja-to-industrial-zone
+    name: Седьмая проходная
+    direction: в промзону
+    latitude: 55.502541
+    longitude: 28.589536
+  - key: sedmaja-prohodnaja-from-industrial-zone
+    name: Седьмая проходная
+    direction: из промзоны
+    latitude: 55.502741
+    longitude: 28.590008
+  - key: ropnjanskaja
+    name: Ропнянская
+    latitude: 55.542158
+    longitude: 28.674729

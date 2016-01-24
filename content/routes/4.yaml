@@ -1,0 +1,175 @@
+routes:
+  - number: 4
+    description: Подкастельцы ⇄ Больничный городок
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: slobodskaja-even
+        shift: 00:24
+      - key: gajdara-odd
+        shift: 00:25
+      - key: pervaja-palatka-even
+        shift: 00:27
+      - key: kinoteatr-kosmos-even
+        shift: 00:29
+      - key: gostinitsa-belarus-even
+        shift: 00:30
+      - key: stroitelnaja
+        shift: 00:33
+      - key: molodezhnaja-even
+        shift: 00:34
+      - key: komsomolskaja-even
+        shift: 00:37
+      - key: muzykalnaja-shkola-even
+        shift: 00:38
+      - key: kinoteatr-minsk-even
+        shift: 00:40
+      - key: gostinitsa-naftan-even
+        shift: 00:41
+      - key: zavod-izmeritel-even
+        shift: 00:43
+      - key: podkasteltsy-even
+        shift: 00:45
+      - key: vasilevtsy-even
+        shift: 00:46
+      - key: vosmoj-mikrorajon-even
+        shift: 00:47
+      - key: polimirovskaja-final
+        shift: 00:48
+    trips:
+      workdays:
+        - 06:15
+        - 07:17
+        - 08:26
+        - 08:50
+        - 08:57
+        - 09:07
+        - 09:14
+        - 09:30
+        - 09:46
+        - 09:52
+        - 10:04
+        - 10:14
+        - 10:27
+        - 10:32
+        - 10:46
+        - 10:58
+        - 11:06
+        - 11:17
+        - 11:24
+        - 11:40
+        - 12:03
+        - 12:08
+        - 12:14
+        - 12:24
+        - 12:42
+        - 12:52
+        - 13:00
+        - 13:13
+        - 13:24
+        - 13:33
+        - 13:41
+        - 14:04
+        - 14:10
+        - 14:27
+        - 14:40
+        - 14:57
+        - 15:18
+        - 15:26
+        - 15:32
+        - 15:50
+        - 15:54
+        - 16:15
+        - 17:11
+        - 17:22
+        - 17:44
+        - 17:59
+        - 18:25
+        - 18:43
+        - 19:13
+        - 19:45
+        - 19:59
+        - 20:19
+        - 20:35
+        - 21:13
+        - 21:24
+        - 21:40
+        - 21:54
+        - 22:09
+        - 22:40
+        - 22:52
+        - 23:07
+      weekend:
+        - 08:02
+        - 08:35
+        - 09:05
+        - 09:13
+        - 09:30
+        - 09:39
+        - 09:57
+        - 10:13
+        - 10:21
+        - 10:28
+        - 10:42
+        - 11:01
+        - 11:12
+        - 11:28
+        - 11:38
+        - 11:50
+        - 11:56
+        - 12:06
+        - 12:32
+        - 12:48
+        - 12:58
+        - 13:08
+        - 13:30
+        - 13:42
+        - 14:09
+        - 14:33
+        - 15:17
+        - 15:38
+        - 15:53
+        - 16:00
+        - 16:24
+        - 16:34
+        - 16:56
+        - 17:07
+        - 17:28
+        - 17:50
+        - 18:01
+        - 18:12
+        - 18:24
+        - 18:36
+        - 19:05
+        - 19:16
+        - 19:54
+        - 20:29
+        - 21:11
+        - 21:35
+        - 21:53
+        - 22:10
+        - 22:32
+        - 22:46
+        - 23:00

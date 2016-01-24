@@ -1,0 +1,79 @@
+routes:
+  - number: 16
+    description: Подкастельцы ⇄ Гайдара
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:25
+      - key: slobodskaja-odd
+        shift: 00:27
+      - key: magazin-berezka-odd
+        shift: 00:28
+      - key: kinoteatr-kosmos-even
+        shift: 00:30
+      - key: gostinitsa-belarus-even
+        shift: 00:31
+      - key: stroitelnaja
+        shift: 00:33
+      - key: molodezhnaja-even
+        shift: 00:34
+      - key: komsomolskaja-even
+        shift: 00:37
+      - key: muzykalnaja-shkola-even
+        shift: 00:39
+      - key: kinoteatr-minsk-even
+        shift: 00:41
+      - key: gostinitsa-naftan-even
+        shift: 00:42
+      - key: zavod-izmeritel-even
+        shift: 00:44
+      - key: podkasteltsy-even
+        shift: 00:45
+      - key: vasilevtsy-even
+        shift: 00:47
+      - key: vosmoj-mikrorajon-even
+        shift: 00:48
+      - key: polimirovskaja-final
+        shift: 00:49
+    trips:
+      workdays:
+        - 09:19
+        - 10:09
+        - 11:10
+        - 12:29
+        - 13:45
+        - 14:46
+        - 17:30
+      weekend:
+        - 08:50
+        - 09:48
+        - 11:20
+        - 12:15
+        - 13:52
+        - 14:41
+        - 15:46

@@ -1,0 +1,22 @@
+routes:
+  - number: 13
+    description: Ропнянская → Автовокзал
+    stops:
+      - key: ropnjanskaja
+        shift: 00:00
+      - key: kalinina-even
+        shift: 00:05
+      - key: molodezhnaja-odd
+        shift: 00:07
+      - key: gostinitsa-belarus-odd
+        shift: 00:10
+      - key: magazin-berezka-even
+        shift: 00:12
+      - key: avtovokzal-novopolotsk-final
+        shift: 00:15
+    trips:
+      weekend:
+        - 14:45
+        - 21:30
+        - 14:45
+        - 21:30

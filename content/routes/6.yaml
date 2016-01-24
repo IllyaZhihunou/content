@@ -1,0 +1,319 @@
+routes:
+  - number: 6
+    description: Новополоцк → Боровуха
+    stops:
+      - key: avtovokzal-novopolotsk-boarding
+        shift: 00:00
+      - key: magazin-berezka-odd
+        shift: 00:06
+      - key: gostinitsa-belarus-even
+        shift: 00:09
+      - key: molodezhnaja-even
+        shift: 00:12
+      - key: kalinina-odd
+        shift: 00:15
+      - key: koptevo-to-borovuha
+        shift: 00:18
+      - key: ohotnitsa-no-1-to-borovuha
+        shift: 00:21
+      - key: ohotnitsa-po-trebovaniju-to-borovuha
+        shift: 00:22
+      - key: ohotnitsa-no-2-to-borovuha
+        shift: 00:25
+      - key: glinische-to-borovuha
+        shift: 00:27
+      - key: kladbische-to-borovuha
+        shift: 00:29
+      - key: perekrestok-to-borovuha
+        shift: 00:31
+      - key: gorodok-to-borovuha
+        shift: 00:33
+      - key: dom-ofitserov-to-borovuha
+        shift: 00:35
+      - key: selpo-to-borovuha
+        shift: 00:37
+    trips:
+      everyday:
+        - 05:13
+        - 06:10
+        - 07:00
+        - 07:44
+        - 08:10
+        - 08:45
+        - 10:10
+        - 11:18
+        - 11:55
+        - 12:55
+        - 13:24
+        - 14:40
+        - 16:40
+        - 17:10
+        - 17:40
+        - 18:54
+        - 19:35
+        - 22:10
+        - 23:31
+  - number: 6
+    description: Новополоцк → УОР
+    stops:
+      - key: avtovokzal-novopolotsk-boarding
+        shift: 00:00
+      - key: magazin-berezka-odd
+        shift: 00:06
+      - key: gostinitsa-belarus-even
+        shift: 00:09
+      - key: molodezhnaja-even
+        shift: 00:12
+      - key: kalinina-odd
+        shift: 00:15
+      - key: koptevo-to-borovuha
+        shift: 00:18
+      - key: ohotnitsa-no-1-to-borovuha
+        shift: 00:21
+      - key: ohotnitsa-po-trebovaniju-to-borovuha
+        shift: 00:22
+      - key: ohotnitsa-no-2-to-borovuha
+        shift: 00:25
+      - key: glinische-to-borovuha
+        shift: 00:27
+      - key: kladbische-to-borovuha
+        shift: 00:29
+      - key: perekrestok-to-borovuha
+        shift: 00:31
+      - key: gorodok-to-borovuha
+        shift: 00:33
+      - key: dom-ofitserov-to-borovuha
+        shift: 00:35
+      - key: selpo-to-borovuha
+        shift: 00:37
+      - key: uor-to-borovuha
+        shift: 00:38
+    trips:
+      everyday:
+        - 05:50
+        - 06:30
+        - 06:35
+        - 07:27
+        - 09:12
+        - 09:35
+        - 10:50
+        - 12:25
+        - 14:00
+        - 15:05
+        - 15:45
+        - 16:15
+        - 18:20
+        - 20:25
+        - 21:25
+  - number: 6
+    description: Боровуха → Новополоцк
+    stops:
+      - key: selpo-from-borovuha
+        shift: 00:00
+      - key: dom-ofitserov-from-borovuha
+        shift: 00:02
+      - key: gorodok-from-borovuha
+        shift: 00:07
+      - key: perekrestok-from-borovuha
+        shift: 00:11
+      - key: kladbische-from-borovuha
+        shift: 00:13
+      - key: glinische-from-borovuha
+        shift: 00:14
+      - key: ohotnitsa-no-2-from-borovuha
+        shift: 00:16
+      - key: ohotnitsa-po-trebovaniju-from-borovuha
+        shift: 00:19
+      - key: ohotnitsa-no-1-from-borovuha
+        shift: 00:21
+      - key: koptevo-from-borovuha
+        shift: 00:23
+      - key: kalinina-even
+        shift: 00:26
+      - key: molodezhnaja-odd
+        shift: 00:28
+      - key: gostinitsa-belarus-odd
+        shift: 00:31
+      - key: magazin-berezka-even
+        shift: 00:34
+      - key: avtovokzal-novopolotsk-final
+        shift: 00:37
+    trips:
+      everyday:
+        - 05:52
+        - 06:55
+        - 07:44
+        - 08:24
+        - 08:48
+        - 09:24
+        - 10:49
+        - 12:08
+        - 12:40
+        - 13:35
+        - 14:05
+        - 15:18
+        - 17:34
+        - 18:00
+        - 18:30
+        - 19:40
+        - 20:16
+        - 22:48
+        - 24:01
+  - number: 6
+    description: УОР → Новополоцк
+    stops:
+      - key: uor-from-borovuha
+        shift: 00:00
+      - key: selpo-from-borovuha
+        shift: 00:01
+      - key: dom-ofitserov-from-borovuha
+        shift: 00:03
+      - key: gorodok-from-borovuha
+        shift: 00:08
+      - key: perekrestok-from-borovuha
+        shift: 00:12
+      - key: kladbische-from-borovuha
+        shift: 00:14
+      - key: glinische-from-borovuha
+        shift: 00:15
+      - key: ohotnitsa-no-2-from-borovuha
+        shift: 00:17
+      - key: ohotnitsa-po-trebovaniju-from-borovuha
+        shift: 00:20
+      - key: ohotnitsa-no-1-from-borovuha
+        shift: 00:22
+      - key: koptevo-from-borovuha
+        shift: 00:24
+      - key: kalinina-even
+        shift: 00:27
+      - key: molodezhnaja-odd
+        shift: 00:29
+      - key: gostinitsa-belarus-odd
+        shift: 00:32
+      - key: magazin-berezka-even
+        shift: 00:35
+      - key: avtovokzal-novopolotsk-final
+        shift: 00:38
+    trips:
+      everyday:
+        - 06:32
+        - 07:05
+        - 07:13
+        - 08:08
+        - 09:51
+        - 10:15
+        - 11:30
+        - 13:10
+        - 14:38
+        - 15:45
+        - 16:26
+        - 17:05
+        - 19:10
+        - 21:05
+        - 22:05
+  - number: 6а
+    description: Подкастельцы → УОР
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: kalinina-odd
+        shift: 00:17
+      - key: koptevo-to-borovuha
+        shift: 00:20
+      - key: ohotnitsa-no-1-to-borovuha
+        shift: 00:23
+      - key: ohotnitsa-po-trebovaniju-to-borovuha
+        shift: 00:24
+      - key: ohotnitsa-no-2-to-borovuha
+        shift: 00:27
+      - key: glinische-to-borovuha
+        shift: 00:29
+      - key: kladbische-to-borovuha
+        shift: 00:31
+      - key: perekrestok-to-borovuha
+        shift: 00:33
+      - key: gorodok-to-borovuha
+        shift: 00:35
+      - key: dom-ofitserov-to-borovuha
+        shift: 00:37
+      - key: selpo-to-borovuha
+        shift: 00:39
+      - key: uor-to-borovuha
+        shift: 00:40
+    trips:
+      everyday:
+        - 06:28
+        - 08:52
+        - 10:30
+        - 14:15
+        - 15:55
+        - 17:25
+  - number: 6а
+    description: УОР → Подкастельцы
+    stops:
+      - key: uor-from-borovuha
+        shift: 00:00
+      - key: selpo-from-borovuha
+        shift: 00:01
+      - key: dom-ofitserov-from-borovuha
+        shift: 00:03
+      - key: gorodok-from-borovuha
+        shift: 00:07
+      - key: perekrestok-from-borovuha
+        shift: 00:11
+      - key: kladbische-from-borovuha
+        shift: 00:13
+      - key: glinische-from-borovuha
+        shift: 00:14
+      - key: ohotnitsa-no-2-from-borovuha
+        shift: 00:16
+      - key: ohotnitsa-po-trebovaniju-from-borovuha
+        shift: 00:19
+      - key: ohotnitsa-no-1-from-borovuha
+        shift: 00:21
+      - key: koptevo-from-borovuha
+        shift: 00:23
+      - key: kalinina-even
+        shift: 00:26
+      - key: komsomolskaja-even
+        shift: 00:29
+      - key: muzykalnaja-shkola-even
+        shift: 00:31
+      - key: kinoteatr-minsk-even
+        shift: 00:32
+      - key: gostinitsa-naftan-even
+        shift: 00:34
+      - key: zavod-izmeritel-even
+        shift: 00:36
+      - key: podkasteltsy-even
+        shift: 00:37
+      - key: vasilevtsy-even
+        shift: 00:39
+      - key: vosmoj-mikrorajon-even
+        shift: 00:40
+      - key: polimirovskaja-final
+        shift: 00:41
+    trips:
+      everyday:
+        - 07:11
+        - 09:37
+        - 11:13
+        - 14:58
+        - 16:40
+        - 18:15

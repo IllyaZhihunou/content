@@ -1,0 +1,127 @@
+routes:
+  - number: 12
+    description: Подкастельцы → Шнитки
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: kinoteatr-kosmos-odd
+        shift: 00:21
+      - key: pervaja-palatka-odd
+        shift: 00:24
+      - key: gajdara-even
+        shift: 00:25
+      - key: po-trebovaniju-to-industrial-zone
+        shift: 00:27
+      - key: profilaktorij-bvk-to-industrial-zone
+        shift: 00:28
+      - key: shnitki-no-1-to-industrial-zone
+        shift: 00:30
+      - key: shnitki-no-2-to-industrial-zone
+        shift: 00:32
+    trips:
+      workdays:
+        - 08:33
+        - 09:30
+        - 10:23
+        - 11:36
+        - 12:49
+        - 13:59
+        - 14:52
+        - 15:38
+        - 17:35
+        - 20:26
+      weekend:
+        - 09:00
+        - 09:44
+        - 10:25
+        - 11:32
+        - 12:23
+        - 14:37
+        - 15:27
+        - 16:29
+        - 17:22
+        - 18:40
+  - number: 12
+    description: Шнитки → Подкастельцы
+    stops:
+      - key: shnitki-no-2-from-industrial-zone
+        shift: 00:00
+      - key: shnitki-no-1-from-industrial-zone
+        shift: 00:02
+      - key: profilaktorij-bvk-from-industrial-zone
+        shift: 00:04
+      - key: po-trebovaniju-from-industrial-zone
+        shift: 00:06
+      - key: gajdara-odd
+        shift: 00:08
+      - key: pervaja-palatka-even
+        shift: 00:10
+      - key: kinoteatr-kosmos-even
+        shift: 00:12
+      - key: gostinitsa-belarus-even
+        shift: 00:14
+      - key: stroitelnaja
+        shift: 00:16
+      - key: molodezhnaja-even
+        shift: 00:17
+      - key: komsomolskaja-even
+        shift: 00:20
+      - key: muzykalnaja-shkola-even
+        shift: 00:21
+      - key: kinoteatr-minsk-even
+        shift: 00:23
+      - key: gostinitsa-naftan-even
+        shift: 00:24
+      - key: zavod-izmeritel-even
+        shift: 00:26
+      - key: podkasteltsy-even
+        shift: 00:28
+      - key: vasilevtsy-even
+        shift: 00:30
+      - key: vosmoj-mikrorajon-even
+        shift: 00:31
+      - key: polimirovskaja-final
+        shift: 00:32
+    trips:
+      workdays:
+        - 09:20
+        - 10:12
+        - 11:00
+        - 12:14
+        - 13:23
+        - 14:49
+        - 15:37
+        - 16:22
+        - 18:23
+        - 21:10
+      weekend:
+        - 09:40
+        - 10:34
+        - 11:25
+        - 12:16
+        - 13:09
+        - 15:27
+        - 16:26
+        - 17:21
+        - 17:59
+        - 19:17

@@ -1,0 +1,66 @@
+routes:
+  - number: 3
+    description: Больничный городок → Станция «Новополоцк»
+    stops:
+      - key: magazin-berezka-odd
+        shift: 00:00
+      - key: gdk-odd
+        shift: 00:02
+      - key: pervaja-palatka-odd
+        shift: 00:04
+      - key: gajdara-even
+        shift: 00:06
+      - key: slobodskaja-odd
+        shift: 00:07
+      - key: tehnikum
+        shift: 00:08
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:11
+      - key: podstantsija-to-industrial-zone
+        shift: 00:13
+      - key: vitolit-to-industrial-zone
+        shift: 00:15
+      - key: kpd-to-industrial-zone
+        shift: 00:17
+      - key: nrsmu-to-industrial-zone
+        shift: 00:19
+      - key: zavod-polimir-to-industrial-zone
+        shift: 00:20
+      - key: pozharnaja-to-industrial-zone
+        shift: 00:22
+      - key: tretja-prohodnaja-to-industrial-zone
+        shift: 00:24
+    trips:
+      workdays:
+        - 07:00
+        - 07:25
+        - 07:53
+        - 14:41
+        - 15:31
+        - 16:29
+  - number: 3
+    description: Станция «Новополоцк» → Больничный городок
+    stops:
+      - key: tretja-prohodnaja-from-industrial-zone
+        shift: 00:00
+      - key: pozharnaja-from-industrial-zone
+        shift: 00:02
+      - key: zavod-polimir-from-industrial-zone
+        shift: 00:04
+      - key: nrsmu-from-industrial-zone
+        shift: 00:06
+      - key: kpd-from-industrial-zone
+        shift: 00:08
+      - key: vitolit-from-industrial-zone
+        shift: 00:10
+      - key: podstantsija-from-industrial-zone
+        shift: 00:12
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:14
+    trips:
+      workdays:
+        - 07:35
+        - 08:28
+        - 15:13
+        - 16:20
+        - 17:20

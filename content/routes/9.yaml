@@ -1,0 +1,234 @@
+routes:
+  - number: 9
+    description: Подкастельцы → Третья проходная
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: tehnikum
+        shift: 00:23
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:26
+      - key: podstantsija-to-industrial-zone
+        shift: 00:28
+      - key: vitolit-to-industrial-zone
+        shift: 00:30
+      - key: kpd-to-industrial-zone
+        shift: 00:31
+      - key: nrsmu-to-industrial-zone
+        shift: 00:32
+      - key: zavod-polimir-to-industrial-zone
+        shift: 00:33
+      - key: pozharnaja-to-industrial-zone
+        shift: 00:34
+      - key: tretja-prohodnaja-to-industrial-zone
+        shift: 00:35
+    trips:
+      workdays:
+        - 05:59
+        - 06:17
+        - 06:44
+        - 06:59
+        - 07:05
+        - 07:24
+        - 14:36
+        - 15:11
+        - 15:44
+        - 16:13
+        - 16:19
+        - 16:34
+        - 17:02
+        - 17:40
+        - 19:05
+        - 23:12
+      weekend:
+        - 07:00
+        - 19:07
+  - number: 9
+    description: Третья проходная → Подкастельцы
+    stops:
+      - key: tretja-prohodnaja-from-industrial-zone
+        shift: 00:00
+      - key: pozharnaja-from-industrial-zone
+        shift: 00:01
+      - key: zavod-polimir-from-industrial-zone
+        shift: 00:02
+      - key: nrsmu-from-industrial-zone
+        shift: 00:03
+      - key: kpd-from-industrial-zone
+        shift: 00:04
+      - key: vitolit-from-industrial-zone
+        shift: 00:06
+      - key: podstantsija-from-industrial-zone
+        shift: 00:07
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:08
+      - key: magazin-berezka-odd
+        shift: 00:11
+      - key: kinoteatr-kosmos-even
+        shift: 00:13
+      - key: gostinitsa-belarus-even
+        shift: 00:14
+      - key: stroitelnaja
+        shift: 00:16
+      - key: molodezhnaja-even
+        shift: 00:17
+      - key: komsomolskaja-even
+        shift: 00:20
+      - key: muzykalnaja-shkola-even
+        shift: 00:22
+      - key: kinoteatr-minsk-even
+        shift: 00:24
+      - key: gostinitsa-naftan-even
+        shift: 00:25
+      - key: zavod-izmeritel-even
+        shift: 00:27
+      - key: podkasteltsy-even
+        shift: 00:29
+      - key: vasilevtsy-even
+        shift: 00:30
+      - key: vosmoj-mikrorajon-even
+        shift: 00:31
+      - key: polimirovskaja-final
+        shift: 00:33
+    trips:
+      workdays:
+        - 06:47
+        - 07:24
+        - 07:50
+        - 08:05
+        - 08:16
+        - 15:24
+        - 16:00
+        - 16:27
+        - 16:55
+        - 17:05
+        - 17:24
+        - 17:44
+        - 18:25
+        - 20:20
+        - 24:12
+      weekend:
+        - 08:17
+        - 20:25
+  - number: 9а
+    description: Подкастельцы → Завод «Полимир»
+    stops:
+      - key: polimirovskaja-odd
+        shift: 00:02
+      - key: vosmoj-mikrorajon-odd
+        shift: 00:03
+      - key: vasilevtsy-odd
+        shift: 00:05
+      - key: podkasteltsy-odd
+        shift: 00:06
+      - key: zavod-izmeritel-odd
+        shift: 00:08
+      - key: gostinitsa-naftan-odd
+        shift: 00:10
+      - key: kinoteatr-minsk-odd
+        shift: 00:11
+      - key: muzykalnaja-shkola-odd
+        shift: 00:13
+      - key: komsomolskaja-odd
+        shift: 00:14
+      - key: molodezhnaja-odd
+        shift: 00:17
+      - key: gostinitsa-belarus-odd
+        shift: 00:19
+      - key: magazin-berezka-even
+        shift: 00:22
+      - key: tehnikum
+        shift: 00:23
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:26
+      - key: podstantsija-to-industrial-zone
+        shift: 00:28
+      - key: vitolit-to-industrial-zone
+        shift: 00:30
+      - key: kpd-to-industrial-zone
+        shift: 00:31
+      - key: nrsmu-to-industrial-zone
+        shift: 00:32
+      - key: zavod-polimir-to-industrial-zone
+        shift: 00:33
+    trips:
+      workdays:
+        - 07:38
+        - 08:09
+        - 08:55
+        - 11:21
+        - 16:02
+        - 16:44
+  - number: 9а
+    description: Завод «Полимир» → Подкастельцы
+    stops:
+      - key: zavod-polimir-from-industrial-zone
+        shift: 00:00
+      - key: nrsmu-from-industrial-zone
+        shift: 00:01
+      - key: kpd-from-industrial-zone
+        shift: 00:02
+      - key: vitolit-from-industrial-zone
+        shift: 00:04
+      - key: podstantsija-from-industrial-zone
+        shift: 00:05
+      - key: tramvajnyj-park-from-industrial-zone
+        shift: 00:06
+      - key: magazin-berezka-odd
+        shift: 00:09
+      - key: kinoteatr-kosmos-even
+        shift: 00:11
+      - key: gostinitsa-belarus-even
+        shift: 00:12
+      - key: stroitelnaja
+        shift: 00:14
+      - key: molodezhnaja-even
+        shift: 00:15
+      - key: komsomolskaja-even
+        shift: 00:18
+      - key: muzykalnaja-shkola-even
+        shift: 00:20
+      - key: kinoteatr-minsk-even
+        shift: 00:22
+      - key: gostinitsa-naftan-even
+        shift: 00:23
+      - key: zavod-izmeritel-even
+        shift: 00:25
+      - key: podkasteltsy-even
+        shift: 00:27
+      - key: vasilevtsy-even
+        shift: 00:28
+      - key: vosmoj-mikrorajon-even
+        shift: 00:30
+      - key: polimirovskaja-final
+        shift: 00:31
+    trips:
+      workdays:
+        - 08:24
+        - 08:54
+        - 09:39
+        - 12:13
+        - 16:51
+        - 17:23
