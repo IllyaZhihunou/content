@@ -70,7 +70,7 @@ class Content:
 
     @classmethod
     def _read_stops(cls, directory):
-        stops = list()
+        stops = []
 
         producer = StopsProducer()
         for root in cls._enumerate_yaml_roots(directory):
@@ -92,7 +92,7 @@ class Content:
 
     @classmethod
     def _read_routes(cls, directory):
-        routes = list()
+        routes = []
 
         producer = RoutesProducer()
         for root in cls._enumerate_yaml_roots(directory):
@@ -109,7 +109,7 @@ class ContentValidator(metaclass=abc.ABCMeta):
 
 class StopKeyUniquenessValidator(ContentValidator):
     def validate(self, content):
-        used_keys = dict()
+        used_keys = {}
         for stop in (x.value for x in content.stops):
             key = stop.key.value
             if key in used_keys:
@@ -192,16 +192,16 @@ class NamedTupleProducer(ItemProducer):
 
         self._tuple_class = tuple_class
         self._producer_descriptors = self._make_descriptors(
-            required_attr_producers or dict(),
-            optional_attr_producers or dict()
+            required_attr_producers or {},
+            optional_attr_producers or {}
         )
-        self._validators = validators or list()
+        self._validators = validators or []
         self._key_producer = ScalarProducer(
             StringValueExtractor(), NonEmptyStringValidator()
         )
 
     def _make_descriptors(self, required_producers, optional_producers):
-        descriptors = dict()
+        descriptors = {}
 
         for key, producer in required_producers.items():
             descriptors[key] = self.ProducerDescriptor(
