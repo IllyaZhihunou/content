@@ -116,7 +116,7 @@ class FileSystemNodeSource(YamlNodeSource):
 
         for file_path in file_paths:
             with open(file_path, encoding=self.ENCODING) as file:
-                yield yaml.compose(file)
+                yield Yaml.create_root_node(file)
 
     def _is_yaml_file(self, file_name):
         return os.path.isfile(file_name) and file_name.endswith(self.YAML_EXT)
@@ -159,7 +159,7 @@ class StopKeyReferentialIntegrityValidator(ContentValidator):
         for route_stops in (x.value.stops.value for x in content.routes):
             for key_item in (y.value.key for y in route_stops):
                 if key_item.value not in valid_stop_keys:
-                    raise SimpleValidationError.from_item(
+                    raise DataError.from_item(
                         'Undeclared stop key "{}"'.format(key_item.value),
                         key_item
                     )
@@ -181,7 +181,7 @@ class ScalarProducer(ItemProducer):
 
     def produce(self, node):
         if not isinstance(node, yaml.ScalarNode):
-            raise SimpleValidationError.from_node('Scalar expected', node)
+            raise DataError.from_node('Scalar expected', node)
 
         value = self._extractor.extract(node)
         for validator in self._validators:
@@ -201,7 +201,7 @@ class ListProducer(ItemProducer):
 
     def produce(self, node):
         if not isinstance(node, yaml.SequenceNode):
-            raise SimpleValidationError.from_node('Sequence expected', node)
+            raise DataError.from_node('Sequence expected', node)
 
         value = [self._list_item_producer.produce(x) for x in node.value]
         for validator in self._validators:
@@ -254,7 +254,7 @@ class NamedTupleProducer(ItemProducer):
 
     def produce(self, node):
         if not isinstance(node, yaml.MappingNode):
-            raise SimpleValidationError.from_node('Mapping expected', node)
+            raise DataError.from_node('Mapping expected', node)
 
         tuple_dict = {x: None for x in self._tuple_class._fields}
 
@@ -281,13 +281,13 @@ class NamedTupleProducer(ItemProducer):
     def _get_descriptor(self, key_node):
         key = self._key_producer.produce(key_node).value
         if key not in self._producer_descriptors:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Item "{}" not expected'.format(key), key_node
             )
 
         descriptor = self._producer_descriptors[key]
         if descriptor.produced:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Item "{}" used again'.format(key), key_node
             )
 
@@ -300,7 +300,7 @@ class NamedTupleProducer(ItemProducer):
             None
         )
         if non_produced:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Required item "{0}" not specified'.format(non_produced.key),
                 node
             )
@@ -416,7 +416,7 @@ class ValidationError(Exception):
         return 'line {}, column {}'.format(mark.line + 1, mark.column + 1)
 
 
-class SimpleValidationError(ValidationError):
+class DataError(ValidationError):
     def __init__(self, message, start_mark, end_mark):
         self.message = message
         self.start_mark = start_mark
@@ -424,11 +424,11 @@ class SimpleValidationError(ValidationError):
 
     @classmethod
     def from_node(cls, message, node):
-        return SimpleValidationError(message, node.start_mark, node.end_mark)
+        return DataError(message, node.start_mark, node.end_mark)
 
     @classmethod
     def from_item(cls, message, item):
-        return SimpleValidationError(message, item.start_mark, item.end_mark)
+        return DataError(message, item.start_mark, item.end_mark)
 
     def __str__(self, *args, **kwargs):
         return '{}.\nFile: {}.\nStart: {}; end: {}.'.format(
@@ -462,6 +462,14 @@ class KeySecondUsageError(ValidationError):
         )
 
 
+class YamlFormatError(ValidationError):
+    def __init__(self, message):
+        self._message = message
+
+    def __str__(self):
+        return 'YAML parsing error:\n{}'.format(self._message)
+
+
 class ValueValidator(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def validate(self, value, node):
@@ -475,7 +483,7 @@ class ValueValidator(metaclass=abc.ABCMeta):
 class NonEmptyStringValidator(ValueValidator):
     def validate(self, value, node):
         if not value:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Non empty value required', node
             )
 
@@ -490,7 +498,7 @@ class StringKeyValidator(ValueValidator):
         )
 
         if invalid_char:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Invalid character "{}" in "{}"'.format(invalid_char, value),
                 node
             )
@@ -512,7 +520,7 @@ class StringTimeShiftValidator(ValueValidator):
             self._raise(value, node)
 
     def _raise(self, value, node):
-        raise SimpleValidationError.from_node(
+        raise DataError.from_node(
             '"{}" is not a valid time'.format(node.value), node
         )
 
@@ -535,7 +543,7 @@ class FloatRangeValidator(ValueValidator):
 
     def validate(self, value, node):
         if not self._from_inclusive <= value <= self._to_inclusive:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 'Value expected to be in {}..{} interval'.format(
                     self._from_inclusive, self._to_inclusive
                 ),
@@ -573,7 +581,7 @@ class RouteTripValidator(ValueValidator):
         if not everyday_set and workdays_set or weekend_set:
             return
 
-        raise SimpleValidationError.from_node(
+        raise DataError.from_node(
             'Either one of workdays or weekend, or only everyday '
             'trips expected',
             node
@@ -594,7 +602,7 @@ class FloatValueExtractor(ScalarValueExtractor):
         try:
             return float(node.value)
         except ValueError:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 '"{}" is not a valid float number'.format(node.value), node
             )
 
@@ -611,9 +619,18 @@ class BoolValueExtractor(ScalarValueExtractor):
         elif node.value == 'false':
             return False
         else:
-            raise SimpleValidationError.from_node(
+            raise DataError.from_node(
                 '"{}" is not a valid boolean value'.format(node.value), node
             )
+
+
+class Yaml:
+    @classmethod
+    def create_root_node(cls, stream):
+        try:
+            return yaml.compose(stream)
+        except yaml.YAMLError as e:
+            raise YamlFormatError(str(e))
 
 
 if __name__ == '__main__':

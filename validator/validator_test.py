@@ -8,7 +8,7 @@ class StringYamlNodeSource(YamlNodeSource):
         self._documents = documents
 
     def enumerate(self):
-        return (yaml.compose(x) for x in self._documents)
+        return (Yaml.create_root_node(x) for x in self._documents)
 
 
 class TestStopKeyReferentialIntegrityValidator():
@@ -225,7 +225,7 @@ class TestRouteProducer:
                 - 06:25
             '''
 
-        route = RouteProducer().produce(yaml.compose(yaml_doc)).value
+        route = RouteProducer().produce(Yaml.create_root_node(yaml_doc)).value
 
         assert isinstance(route, Route)
         assert route.number.value == '1'
@@ -243,7 +243,9 @@ class TestRouteStopProducer:
             shift: 00:02
             '''
 
-        route_stop = RouteStopProducer().produce(yaml.compose(yaml_doc)).value
+        route_stop = RouteStopProducer().produce(
+            Yaml.create_root_node(yaml_doc)
+        ).value
 
         assert isinstance(route_stop, RouteStop)
         assert route_stop.key.value == 'magazin-berezka-odd'
@@ -261,7 +263,9 @@ class TestRouteTripProducer:
             - 06:25
             '''
 
-        route_trip = RouteTripProducer().produce(yaml.compose(yaml_doc)).value
+        route_trip = RouteTripProducer().produce(
+            Yaml.create_root_node(yaml_doc)
+        ).value
 
         assert isinstance(route_trip, RouteTrip)
 
@@ -285,7 +289,7 @@ class TestStopTupleProducer:
             longitude: 28.666802
             '''
 
-        stop = StopProducer().produce(yaml.compose(yaml_doc)).value
+        stop = StopProducer().produce(Yaml.create_root_node(yaml_doc)).value
 
         assert isinstance(stop, Stop)
         assert stop.key.value == 'koptevo-to-borovuha'
@@ -304,7 +308,9 @@ class TestNamedTupleProducer:
             text_item: this is some text
             float_item: 123
             '''
-        item = self._make_model_producer().produce(yaml.compose(yaml_doc))
+        item = self._make_model_producer().produce(
+            Yaml.create_root_node(yaml_doc)
+        )
 
         assert isinstance(item.value, self.Model)
         assert item.value.text_item.value == 'this is some text'
@@ -330,7 +336,9 @@ class TestNamedTupleProducer:
             float_item: 123
             optional_bool_item: true
             '''
-        item = self._make_model_producer().produce(yaml.compose(yaml_doc))
+        item = self._make_model_producer().produce(
+            Yaml.create_root_node(yaml_doc)
+        )
 
         assert isinstance(item.value, self.Model)
         assert item.value.text_item.value == 'this is some text'
@@ -343,8 +351,10 @@ class TestNamedTupleProducer:
             text_item: this is some text
             '''
 
-        with pytest.raises(SimpleValidationError) as ex_info:
-            self._make_model_producer().produce(yaml.compose(yaml_doc))
+        with pytest.raises(DataError) as ex_info:
+            self._make_model_producer().produce(
+                Yaml.create_root_node(yaml_doc)
+            )
 
         assert 'Required item' in str(ex_info)
         assert 'not specified' in str(ex_info)
@@ -356,8 +366,10 @@ class TestNamedTupleProducer:
             - 321
             '''
 
-        with pytest.raises(SimpleValidationError) as ex_info:
-            self._make_model_producer().produce(yaml.compose(yaml_doc))
+        with pytest.raises(DataError) as ex_info:
+            self._make_model_producer().produce(
+                Yaml.create_root_node(yaml_doc)
+            )
 
         assert 'Mapping expected' in str(ex_info)
 
@@ -374,7 +386,7 @@ class TestListProducer:
             - three
             '''
 
-        item = producer.produce(yaml.compose(yaml_doc))
+        item = producer.produce(Yaml.create_root_node(yaml_doc))
 
         assert isinstance(item.value, list)
         for list_item in item.value:
@@ -391,8 +403,8 @@ class TestListProducer:
         )
         yaml_doc = '123'
 
-        with pytest.raises(SimpleValidationError) as ex_info:
-            producer.produce(yaml.compose(yaml_doc))
+        with pytest.raises(DataError) as ex_info:
+            producer.produce(Yaml.create_root_node(yaml_doc))
 
         assert 'Sequence expected' in str(ex_info)
 
@@ -403,7 +415,7 @@ class TestScalarProducer:
             StringValueExtractor(),
             NonEmptyStringValidator()
         )
-        node = yaml.compose('some text')
+        node = Yaml.create_root_node('some text')
 
         item = producer.produce(node)
 
@@ -415,9 +427,9 @@ class TestScalarProducer:
 
     def test_non_scalar_fails(self):
         producer = ScalarProducer(StringValueExtractor())
-        node = yaml.compose('lorem: ipsum')
+        node = Yaml.create_root_node('lorem: ipsum')
 
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             producer.produce(node)
 
         assert 'Scalar expected' in str(ex_info)
@@ -425,42 +437,42 @@ class TestScalarProducer:
 
 class TestStringKeyValidator:
     def test_valid(self):
-        node = yaml.compose('valid-key')
+        node = Yaml.create_root_node('valid-key')
         StringKeyValidator().validate(node.value, node)
 
     def test_invalid(self):
-        node = yaml.compose('invalid_key')
-        with pytest.raises(SimpleValidationError) as ex_info:
+        node = Yaml.create_root_node('invalid_key')
+        with pytest.raises(DataError) as ex_info:
             StringKeyValidator().validate(node.value, node)
         assert 'Invalid character' in str(ex_info)
 
 
 class TestFloatRangeValidator:
     def test_in_between_succeeds(self):
-        node = yaml.compose('123.45')
+        node = Yaml.create_root_node('123.45')
         value = FloatValueExtractor().extract(node)
         FloatRangeValidator(10.1, 200.2).validate(value, node)
 
     def test_equal_succeeds(self):
-        node = yaml.compose('123.45')
+        node = Yaml.create_root_node('123.45')
         value = FloatValueExtractor().extract(node)
         FloatRangeValidator(123.45, 200.2).validate(value, node)
         FloatRangeValidator(1.2, 123.45).validate(value, node)
 
     def test_too_small_fails(self):
-        node = yaml.compose('1.0')
+        node = Yaml.create_root_node('1.0')
         value = FloatValueExtractor().extract(node)
 
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             FloatRangeValidator(10.1, 200.2).validate(value, node)
         assert 'expected to be in' in str(ex_info)
         assert 'interval' in str(ex_info)
 
     def test_too_big_fails(self):
-        node = yaml.compose('1000.0')
+        node = Yaml.create_root_node('1000.0')
         value = FloatValueExtractor().extract(node)
 
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             FloatRangeValidator(10.1, 200.2).validate(value, node)
         assert 'expected to be in' in str(ex_info)
         assert 'interval' in str(ex_info)
@@ -471,12 +483,12 @@ class TestTimeShiftValidator:
         self._validate('10:12')
 
     def _validate(self, yaml_doc):
-        node = yaml.compose(yaml_doc)
+        node = Yaml.create_root_node(yaml_doc)
         value = StringValueExtractor().extract(node)
         StringTimeShiftValidator().validate(value, node)
 
     def test_overflow_time_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._validate('00:72')
         self._assert_not_valid_time_error(ex_info)
 
@@ -484,12 +496,12 @@ class TestTimeShiftValidator:
         assert 'is not a valid time' in str(ex_info)
 
     def test_date_and_time_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._validate('01.12.2015 00:13')
         self._assert_not_valid_time_error(ex_info)
 
     def test_non_time_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._validate('some string')
         self._assert_not_valid_time_error(ex_info)
 
@@ -504,7 +516,7 @@ class BaseTestValueExtractor(metaclass=abc.ABCMeta):
         return self._get_extractor().extract(node)
 
     def _make_scalar_node(self, yaml_doc):
-        root = yaml.compose(yaml_doc)
+        root = Yaml.create_root_node(yaml_doc)
         return root.value[0][1]
 
 
@@ -522,7 +534,7 @@ class TestFloatValueExtractor(BaseTestValueExtractor):
         assert self._extract_node_value('value: -123.45') == -123.45
 
     def test_empty_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._extract_node_value('value:')
         self._assert_not_valid_float_number_error(ex_info)
 
@@ -530,7 +542,7 @@ class TestFloatValueExtractor(BaseTestValueExtractor):
         assert 'is not a valid float number' in str(ex_info)
 
     def test_non_float_number_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._extract_node_value('value: some string here')
         self._assert_not_valid_float_number_error(ex_info)
 
@@ -554,7 +566,7 @@ class TestBoolValueExtractor(BaseTestValueExtractor):
         assert self._extract_node_value('value: false') == False
 
     def test_empty_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._extract_node_value('value:')
         self._assert_not_valid_bool_error(ex_info)
 
@@ -562,7 +574,7 @@ class TestBoolValueExtractor(BaseTestValueExtractor):
         assert 'is not a valid boolean value' in str(ex_info)
 
     def test_invalid_string_fails(self):
-        with pytest.raises(SimpleValidationError) as ex_info:
+        with pytest.raises(DataError) as ex_info:
             self._extract_node_value('value: lorem ipsum')
         self._assert_not_valid_bool_error(ex_info)
 
@@ -570,7 +582,7 @@ class TestBoolValueExtractor(BaseTestValueExtractor):
 class TestPyyamlInterface:
     def test_scalar_node(self):
         yaml_doc = 'test'
-        root = yaml.compose(yaml_doc)
+        root = Yaml.create_root_node(yaml_doc)
 
         assert isinstance(root, yaml.ScalarNode)
         assert root.value == 'test'
@@ -582,7 +594,7 @@ class TestPyyamlInterface:
             - two
             - three
             '''
-        root = yaml.compose(yaml_doc)
+        root = Yaml.create_root_node(yaml_doc)
 
         assert isinstance(root, yaml.SequenceNode)
         assert len(root.value) == 3
@@ -597,10 +609,15 @@ class TestPyyamlInterface:
             key_three: value_three
             '''
 
-        root = yaml.compose(yaml_doc)
+        root = Yaml.create_root_node(yaml_doc)
 
         assert isinstance(root, yaml.MappingNode)
         assert len(root.value) == 3
         for item in root.value:
             assert isinstance(item, tuple)
             assert len(item) == 2
+
+    def test_invalid_yaml(self):
+        with pytest.raises(YamlFormatError) as ex_info:
+            Yaml.create_root_node(']')
+        assert 'YAML parsing error' in str(ex_info)
