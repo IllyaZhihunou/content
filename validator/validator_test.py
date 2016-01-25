@@ -3,6 +3,209 @@ import pytest
 from validator import *
 
 
+class StringYamlNodeSource(YamlNodeSource):
+    def __init__(self, documents):
+        self._documents = documents
+
+    def enumerate(self):
+        return (yaml.compose(x) for x in self._documents)
+
+
+class TestStopKeyReferentialIntegrityValidator():
+    def test_valid_succeeds(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+        routes = [
+            '''
+            routes:
+              - number: 1
+                description: description1
+                stops:
+                  - key: key1
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            '''
+        ]
+
+        self.validate(stops, routes)
+
+    def validate(self, stops, routes):
+        content = Content(
+            StringYamlNodeSource(stops), StringYamlNodeSource(routes)
+        )
+
+        StopKeyReferentialIntegrityValidator().validate(content)
+
+    def test_invalid_fails(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+        routes = [
+            '''
+            routes:
+              - number: 1
+                description: description1
+                stops:
+                  - key: key2
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            '''
+        ]
+
+        with pytest.raises(ValidationError) as ex_info:
+            self.validate(stops, routes)
+        assert 'Undeclared stop key' in str(ex_info)
+
+
+class TestStopKeyUniquenessValidator():
+    def test_valid_succeeds(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name1
+                latitude: 55.542185
+                longitude: 28.666802
+              - key: key2
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+
+        self.validate(stops)
+
+    def validate(self, stops):
+        content = Content(
+            StringYamlNodeSource(stops), StringYamlNodeSource([])
+        )
+
+        StopKeyUniquenessValidator().validate(content)
+
+    def test_invalid_fails(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name1
+                latitude: 55.542185
+                longitude: 28.666802
+              - key: key1
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+
+        with pytest.raises(ValidationError) as ex_info:
+            self.validate(stops)
+        assert 'Key' in str(ex_info)
+        assert 'used second time' in str(ex_info)
+
+
+class TestContent:
+    def test_stops_from_multiple_sources(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name1
+                latitude: 55.542185
+                longitude: 28.666802
+              - key: key2
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            ''',
+            '''
+            stops:
+              - key: key3
+                name: name3
+                latitude: 55.550659
+                longitude: 28.633479
+              - key: key4
+                name: name4
+                latitude: 55.5503
+                longitude: 28.633575
+            '''
+        ]
+
+        content = Content(
+            StringYamlNodeSource(stops), StringYamlNodeSource([])
+        )
+
+        assert len(content.stops) == 4
+        for stop in content.stops:
+            assert isinstance(stop.value, Stop)
+
+    def test_routes_from_multiple_sources(self):
+        routes = [
+            '''
+            routes:
+              - number: 1
+                description: description1
+                stops:
+                  - key: key1
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+              - number: 2
+                description: description2
+                stops:
+                  - key: key2
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            ''',
+            '''
+            routes:
+              - number: 3
+                description: description3
+                stops:
+                  - key: key3
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+              - number: 4
+                description: description4
+                stops:
+                  - key: key4
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            '''
+        ]
+
+        content = Content(
+            StringYamlNodeSource([]), StringYamlNodeSource(routes)
+        )
+
+        assert len(content.routes) == 4
+        for route in content.routes:
+            assert isinstance(route.value, Route)
+
+
 class TestRouteProducer:
     def test(self):
         yaml_doc = \

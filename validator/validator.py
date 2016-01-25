@@ -24,7 +24,11 @@ CONTENT_RELATIVE_PATH = '../content'
 
 def main():
     try:
-        content = Content.from_directory(get_content_dir())
+        content_dir = get_content_dir()
+        content = Content(
+            StopFileSystemNodeSource(content_dir),
+            RouteFileSystemNodeSource(content_dir)
+        )
         validate_content(content)
     except ValidationError as e:
         print(e, file=sys.stderr)
@@ -57,48 +61,71 @@ class Content:
     STOPS_SUBDIR = 'stops'
     ROUTES_SUBDIR = 'routes'
 
-    def __init__(self, stops, routes):
-        self.stops = stops
-        self.routes = routes
+    def __init__(self, stop_source, route_source):
+        self.stops = self._read_stops(stop_source)
+        self.routes = self._read_routes(route_source)
 
     @classmethod
-    def from_directory(cls, directory):
-        stops = cls._read_stops(os.path.join(directory, cls.STOPS_SUBDIR))
-        routes = cls._read_routes(os.path.join(directory, cls.ROUTES_SUBDIR))
-
-        return Content(stops, routes)
-
-    @classmethod
-    def _read_stops(cls, directory):
-        stops = []
-
-        producer = StopsProducer()
-        for root in cls._enumerate_yaml_roots(directory):
-            stops += producer.produce(root).value.stops.value
-
-        return stops
+    def _read_stops(cls, source):
+        return cls._read_items(
+            source, StopsProducer(), lambda x: x.value.stops.value
+        )
 
     @classmethod
-    def _enumerate_yaml_roots(cls, directory):
-        file_names = (os.path.join(directory, x) for x in os.listdir(directory)
-                      if cls._is_yaml_file(os.path.join(directory, x)))
-        for file_name in file_names:
-            with open(file_name, encoding='utf8') as file:
+    def _read_items(cls, source, producer, item_get_func):
+        items = []
+
+        for root in source.enumerate():
+            items += item_get_func(producer.produce(root))
+
+        return items
+
+    @classmethod
+    def _read_routes(cls, source):
+        return cls._read_items(
+            source, RoutesProducer(), lambda x: x.value.routes.value
+        )
+
+
+class YamlNodeSource(metaclass=abc.ABCMeta):
+    @abc.abstractmethod
+    def enumerate(self):
+        pass
+
+
+class FileSystemNodeSource(YamlNodeSource):
+    ENCODING = 'utf8'
+    YAML_EXT = '.yaml'
+
+    def __init__(self, directory):
+
+        self._directory = os.path.abspath(directory)
+
+    def enumerate(self):
+        paths = (os.path.join(self._directory, x)
+                 for x in os.listdir(self._directory))
+        file_paths = (x for x in paths if self._is_yaml_file(x))
+
+        for file_path in file_paths:
+            with open(file_path, encoding=self.ENCODING) as file:
                 yield yaml.compose(file)
 
-    @classmethod
-    def _is_yaml_file(cls, file_name):
-        return os.path.isfile(file_name) and file_name.endswith('.yaml')
+    def _is_yaml_file(self, file_name):
+        return os.path.isfile(file_name) and file_name.endswith(self.YAML_EXT)
 
-    @classmethod
-    def _read_routes(cls, directory):
-        routes = []
 
-        producer = RoutesProducer()
-        for root in cls._enumerate_yaml_roots(directory):
-            routes += producer.produce(root).value.routes.value
+class RouteFileSystemNodeSource(FileSystemNodeSource):
+    ROUTES_SUBDIR = 'routes'
 
-        return routes
+    def __init__(self, content_directory):
+        super().__init__(os.path.join(content_directory, self.ROUTES_SUBDIR))
+
+
+class StopFileSystemNodeSource(FileSystemNodeSource):
+    STOPS_SUBDIR = 'stops'
+
+    def __init__(self, content_directory):
+        super().__init__(os.path.join(content_directory, self.STOPS_SUBDIR))
 
 
 class ContentValidator(metaclass=abc.ABCMeta):
