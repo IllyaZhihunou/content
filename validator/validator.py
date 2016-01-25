@@ -2,12 +2,12 @@
 # coding: utf-8
 
 import abc
+import argparse
+import os
 import string
+import sys
 from collections import namedtuple
 
-import os
-
-import sys
 import yaml
 
 Item = namedtuple('Item', 'value, start_mark, end_mark')
@@ -19,42 +19,50 @@ Routes = namedtuple('Routes', 'routes')
 Stops = namedtuple('Stops', 'stops')
 
 
-CONTENT_RELATIVE_PATH = '../content'
+class Application:
+    def run(self):
+        content_dir = self._get_content_dir(self._parse_args())
 
+        print('Validating content in {}...'.format(content_dir))
 
-def main():
-    try:
-        content_dir = get_content_dir()
+        try:
+            self._create_and_validate(content_dir)
+        except ValidationError as e:
+            print(e, file=sys.stderr)
+            return -1
+
+        print('Content is valid.')
+
+    def _get_content_dir(self, args):
+        return os.path.abspath(args.content_dir or os.getcwd())
+
+    def _parse_args(self):
+        parser = argparse.ArgumentParser()
+
+        parser.add_argument(
+            '-d', '--content-dir',
+            action='store',
+            help='content directory absolute or relative to current directory '
+                 'path; defaults to current directory'
+        )
+
+        return parser.parse_args()
+
+    def _create_and_validate(self, content_dir):
         content = Content(
             StopFileSystemNodeSource(content_dir),
             RouteFileSystemNodeSource(content_dir)
         )
-        validate_content(content)
-    except ValidationError as e:
-        print(e, file=sys.stderr)
-        return -1
+        self._validate(content)
 
-    print('Content is valid.')
+    def _validate(self, content):
+        validators = [
+            StopKeyUniquenessValidator(),
+            StopKeyReferentialIntegrityValidator()
+        ]
 
-
-def get_content_dir():
-    return os.path.abspath(
-        os.path.join(get_script_dir(), CONTENT_RELATIVE_PATH)
-    )
-
-
-def get_script_dir():
-    return os.path.dirname(os.path.realpath(__file__))
-
-
-def validate_content(content):
-    validators = [
-        StopKeyUniquenessValidator(),
-        StopKeyReferentialIntegrityValidator()
-    ]
-
-    for validator in validators:
-        validator.validate(content)
+        for validator in validators:
+            validator.validate(content)
 
 
 class Content:
@@ -609,4 +617,4 @@ class BoolValueExtractor(ScalarValueExtractor):
 
 
 if __name__ == '__main__':
-    main()
+    Application().run()
