@@ -119,7 +119,7 @@ class StopKeyUniquenessValidator(ContentValidator):
 
 class StopKeyReferentialIntegrityValidator(ContentValidator):
     def validate(self, content):
-        valid_stop_keys = [x.value.key.value for x in content.stops]
+        valid_stop_keys = set(x.value.key.value for x in content.stops)
 
         for route_stops in (x.value.stops.value for x in content.routes):
             for key_item in (y.value.key for y in route_stops):
