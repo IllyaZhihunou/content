@@ -446,7 +446,7 @@ class DataError(ValidationError):
     def from_item(cls, message, item):
         return DataError(message, item.start_mark, item.end_mark)
 
-    def __str__(self, *args, **kwargs):
+    def __str__(self):
         return '{}.\nFile: {}.\nStart: {}; end: {}.'.format(
             self.message,
             self.start_mark.name,
@@ -461,7 +461,7 @@ class KeySecondUsageError(ValidationError):
         self.item = item
         self.first_use_item = first_use_item
 
-    def __str__(self, *args, **kwargs):
+    def __str__(self):
         return ('Key "{}" used second time.\n\n'
                 'At:\n{}\n\n'
                 'First Usage:\n{}.').format(
@@ -499,7 +499,7 @@ class EmptyContentError(ValidationError):
     def no_routes_error(cls):
         error = EmptyContentError()
         error.message = 'No routes found.'
-        return error\
+        return error
 
     @classmethod
     def no_stops_error(cls):
