@@ -11,6 +11,75 @@ class StringYamlNodeSource(YamlNodeSource):
         return (Yaml.create_root_node(x) for x in self._documents)
 
 
+class TestNonEmptyContentValidator:
+    def test_no_stops_fails(self):
+        routes = [
+            '''
+            routes:
+              - number: 1
+                description: description1
+                stops:
+                  - key: key1
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            '''
+        ]
+
+        with pytest.raises(EmptyContentError) as ex_info:
+            self.validate([], routes)
+        assert 'No stops found' in str(ex_info)
+
+    def validate(self, stops, routes):
+        content = Content(
+            StringYamlNodeSource(stops), StringYamlNodeSource(routes)
+        )
+
+        NonEmptyContentValidator().validate(content)
+
+    def test_no_routes_fails(self):
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+
+        with pytest.raises(EmptyContentError) as ex_info:
+            self.validate(stops, [])
+        assert 'No routes found' in str(ex_info)
+
+    def test_with_stops_and_routes_succeeds(self):
+        routes = [
+            '''
+            routes:
+              - number: 1
+                description: description1
+                stops:
+                  - key: key1
+                    shift: 00:00
+                trips:
+                  everyday:
+                    - 05:59
+            '''
+        ]
+        stops = [
+            '''
+            stops:
+              - key: key1
+                name: name2
+                latitude: 55.5418
+                longitude: 28.666802
+            '''
+        ]
+
+        self.validate(stops, routes)
+
+
 class TestStopKeyReferentialIntegrityValidator():
     def test_valid_succeeds(self):
         stops = [

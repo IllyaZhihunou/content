@@ -57,6 +57,7 @@ class Application:
 
     def _validate(self, content):
         validators = [
+            NonEmptyContentValidator(),
             StopKeyUniquenessValidator(),
             StopKeyReferentialIntegrityValidator()
         ]
@@ -111,12 +112,18 @@ class FileSystemNodeSource(YamlNodeSource):
 
     def enumerate(self):
         paths = (os.path.join(self._directory, x)
-                 for x in os.listdir(self._directory))
+                 for x in self._list_content_dir(self._directory))
         file_paths = (x for x in paths if self._is_yaml_file(x))
 
         for file_path in file_paths:
             with open(file_path, encoding=self.ENCODING) as file:
                 yield Yaml.create_root_node(file)
+
+    def _list_content_dir(self, directory):
+        try:
+            return os.listdir(directory)
+        except FileNotFoundError:
+            raise NoContentDirError(directory)
 
     def _is_yaml_file(self, file_name):
         return os.path.isfile(file_name) and file_name.endswith(self.YAML_EXT)
@@ -163,6 +170,15 @@ class StopKeyReferentialIntegrityValidator(ContentValidator):
                         'Undeclared stop key "{}"'.format(key_item.value),
                         key_item
                     )
+
+
+class NonEmptyContentValidator(ContentValidator):
+    def validate(self, content):
+        if not content.stops:
+            raise EmptyContentError.no_stops_error()
+
+        if not content.routes:
+            raise EmptyContentError.no_routes_error()
 
 
 class ItemProducer(metaclass=abc.ABCMeta):
@@ -468,6 +484,31 @@ class YamlFormatError(ValidationError):
 
     def __str__(self):
         return 'YAML parsing error:\n{}'.format(self._message)
+
+
+class NoContentDirError(ValidationError):
+    def __init__(self, directory):
+        self._directory = directory
+
+    def __str__(self):
+        return 'Required directory {} does not exist.'.format(self._directory)
+
+
+class EmptyContentError(ValidationError):
+    @classmethod
+    def no_routes_error(cls):
+        error = EmptyContentError()
+        error.message = 'No routes found.'
+        return error\
+
+    @classmethod
+    def no_stops_error(cls):
+        error = EmptyContentError()
+        error.message = 'No stops found.'
+        return error
+
+    def __str__(self):
+        return self.message
 
 
 class ValueValidator(metaclass=abc.ABCMeta):
