@@ -2,7 +2,7 @@
 
 Provides content for Bus Time stops and routes database.
 
-## Validating
+## Validation
 
 Content validation is performed via built-in validator script.
 
