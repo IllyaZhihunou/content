@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding: utf-8
 
 import abc
@@ -10,6 +10,7 @@ from collections import namedtuple
 
 import yaml
 
+
 Item = namedtuple('Item', 'value, start_mark, end_mark')
 Stop = namedtuple('Stop', 'key, name, direction, latitude, longitude')
 Route = namedtuple('Route', 'number, description, hidden, stops, trips')
@@ -20,6 +21,8 @@ Stops = namedtuple('Stops', 'stops')
 
 
 class Application:
+    VALIDATION_FAILED_STATUS = -1
+
     def run(self):
         content_dir = self._get_content_dir(self._parse_args())
 
@@ -29,7 +32,7 @@ class Application:
             self._create_and_validate(content_dir)
         except ValidationError as e:
             print(e, file=sys.stderr)
-            return -1
+            sys.exit(self.VALIDATION_FAILED_STATUS)
 
         print('Content is valid.')
 
@@ -107,7 +110,6 @@ class FileSystemNodeSource(YamlNodeSource):
     YAML_EXT = '.yaml'
 
     def __init__(self, directory):
-
         self._directory = os.path.abspath(directory)
 
     def enumerate(self):
