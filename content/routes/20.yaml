@@ -29,13 +29,13 @@ routes:
       - key: avtovokzal-novopolotsk-roadway
         shift: 00:25
     trips:
+      workdays:
+        - 07:06
       weekend:
         - 07:06
         - 07:36
         - 17:31
         - 20:16
-      workdays:
-        - 07:06
   - number: 20а
     description: Подкастельцы → Автовокзал через Гайдара
     stops:
@@ -72,9 +72,9 @@ routes:
       - key: avtovokzal-novopolotsk-roadway
         shift: 00:31
     trips:
-      weekend:
-        - 05:30
-        - 13:02
       workdays:
         - 05:30
         - 07:36
+      weekend:
+        - 05:30
+        - 13:02

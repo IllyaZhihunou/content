@@ -15,9 +15,6 @@ routes:
       - key: avtovokzal-novopolotsk-final
         shift: 00:15
     trips:
-      workdays:
-        - 14:45
-        - 21:30
-      weekend:
+      everyday:
         - 14:45
         - 21:30
