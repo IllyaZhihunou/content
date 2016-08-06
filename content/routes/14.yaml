@@ -25,9 +25,10 @@ routes:
       - key: polimirovskaja-final
         shift: 00:21
     trips:
-      weekend:
+      workdays:
         - 14:45
         - 21:30
+      weekend:
         - 09:30
         - 14:45
         - 21:30
