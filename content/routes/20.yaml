@@ -74,7 +74,6 @@ routes:
     trips:
       workdays:
         - 05:30
-        - 07:36
       weekend:
-        - 05:30
-        - 13:02
+        - 13:04
+        - 15:30
