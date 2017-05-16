@@ -4,19 +4,17 @@ Provides content for Bus Time stops and routes database.
 
 ## Validation
 
-Content validation is performed via built-in validator script.
+Requirements: Python 3.+.
 
-Python 3.3—3.5 and PIP are required to be installed.
+1. Resolve dependencies.
 
-First, dependencies should be resolved:
+    ```
+    $ pip install --requirement validator/requirements.txt
+    ```
 
-```
-$ pip install -r validator/requirements.txt
-```
+2. Run the validator providing it with the path to the content.
 
-Then, just run the validator providing it with the path to 
-the content:
+    ```
+    $ python validator/validator.py --content-dir content/
+    ```
 
-```
-$ python validator/validator.py -d content/
-```
