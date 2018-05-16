@@ -442,3 +442,27 @@ routes:
         - 20:10
         - 23:16
         - 24:00
+- number: 2э
+    description: к/т Минск → ОАО «Нафтан»
+    stops:
+      - key: muzykalnaja-shkola-odd
+        shift: 00:02
+      - key: komsomolskaja-odd
+        shift: 00:03
+      - key: poliklinika-no-1
+        shift: 00:07
+      - key: tramvajnyj-park-to-industrial-zone
+        shift: 00:12
+      - key: podstantsija-to-industrial-zone
+        shift: 00:14
+      - key: belsantehmontazh-to-industrial-zone
+        shift: 00:16
+      - key: avtopark-to-industrial-zone
+        shift: 00:17
+      - key: upravlenie-mehanizatsii-to-industrial-zone
+        shift: 00:18
+      - key: oao-naftan-final
+        shift: 00:21
+    trips:
+      workdays:
+        - 07:12
