@@ -445,6 +445,8 @@ routes:
 - number: 2э
     description: к/т Минск → ОАО «Нафтан»
     stops:
+      - key: kinoteatr-minsk-odd
+        shift: 00:00
       - key: muzykalnaja-shkola-odd
         shift: 00:02
       - key: komsomolskaja-odd
